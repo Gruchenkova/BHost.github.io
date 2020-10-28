@@ -811,6 +811,10 @@ header nav ul li:last-of-type {
   height: 11px;
 }
 
+.button_start {
+  position: relative;
+}
+
 .wr-home button {
   margin-top: 20px;
   width: 133px;
@@ -819,10 +823,61 @@ header nav ul li:last-of-type {
   background-color: #00aeef;
   border-style: ridge ridge solid ridge;
   border-color: #fff #fff #00aeef #fff;
+  position: absolute;
+  top: 0%;
+  left: -65px;
+  -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .wr-home button span {
   font-size: 13px;
+}
+
+.start::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
+  background: -o-linear-gradient(right, #9d35c0, #31aae2);
+  background: linear-gradient(to left, #9d35c0, #31aae2);
+  color: #fff;
+  z-index: -1;
+  /* border-radius: 60px; */
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  -o-transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.start:hover::before {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
 }
 
 .wr-experiensed {
@@ -1283,6 +1338,19 @@ label {
   text-align: center;
   font-size: 24px;
   color: #00aeef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .line {
@@ -1694,6 +1762,97 @@ label {
   font-size: 15px;
 }
 
+.tabs {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.tabs .tabs_title {
+  font-size: 30px;
+  padding-bottom: 75px;
+  text-transform: uppercase;
+}
+
+.tabs .better_company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 50px;
+}
+
+.tabs .better_company .inner_company_tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.tabs .better_company .inner_company_tab label {
+  color: #333;
+  font-size: 15px;
+  text-transform: uppercase;
+  width: 130px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin: 0 auto;
+}
+
+.tabs .better_company .company_tab input,
+.tabs .better_company .company_tab_content {
+  display: none;
+}
+
+.tabs .better_company .company_tab input .content_title,
+.tabs .better_company .company_tab_content .content_title {
+  font-size: 20px;
+  color: #333333;
+}
+
+.tabs .better_company .company_tab input .company_tab_content_text,
+.tabs .better_company .company_tab_content .company_tab_content_text {
+  font-size: 15px;
+}
+
+.tabs .better_company .company_tab_title {
+  display: block;
+  cursor: pointer;
+}
+
+.tabs .better_company .company_tab :checked + .company_tab_title {
+  background: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
+  background: -o-linear-gradient(right, #9d35c0, #31aae2);
+  background: linear-gradient(to left, #9d35c0, #31aae2);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.tabs .better_company .company_tab :checked ~ .company_tab_content {
+  display: block;
+  max-width: 650px;
+  position: absolute;
+  left: 70px;
+}
+
+.tabs .better_company img.tabs_img {
+  max-width: 330px;
+  margin-bottom: 30px;
+  padding-top: 80px;
+}
+
 .result {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -1841,6 +2000,7 @@ label {
   margin-right: 30px;
   max-width: 370px;
   position: relative;
+  background: #fff;
 }
 
 .about_us .wr_about_us .inner_about_us img {
@@ -1973,7 +2133,7 @@ label {
 }
 
 .questions .wr-questions .inner_questions .accordion {
-  max-width: 770px;
+  width: 770px;
   padding-right: 100px;
 }
 
@@ -1989,12 +2149,9 @@ label {
 
 .questions .wr-questions .inner_questions .tab {
   /* font: Параметры шрифта
-				border: 1px solid #e9eaec; Параметры рамки */
+				border:  Параметры рамки */
   border-left: 15px solid #00aeef;
-  /* border-radius: 3px; */
-  /* Скругляем уголки */
   color: #333;
-  /* Цвет текста */
   margin-bottom: 20px;
   /* Расстояние между пунктами */
 }
@@ -2004,12 +2161,7 @@ label {
   /* Поля вокруг текста */
   display: block;
   /* Блочный элемент */
-  /* text-transform: uppercase; */
-  /* Все буквы заглавные */
-  /* font-weight: bold; */
-  /* Жирное начертание */
   cursor: pointer;
-  /* Вид курсора */
 }
 
 .questions .wr-questions .inner_questions .tab-title::after {
@@ -2033,6 +2185,7 @@ label {
 .questions .wr-questions .inner_questions .tab-content {
   padding: 10px 20px;
   /* Поля вокруг текста */
+  max-width: 770px;
 }
 
 .questions .wr-questions .inner_questions .tab :checked + .tab-title {
@@ -2052,6 +2205,7 @@ label {
 .questions .wr-questions .inner_questions .tab :checked ~ .tab-content {
   display: block;
   /* Показываем содержимое */
+  max-width: 770px;
 }
 
 .feedback {
@@ -2247,6 +2401,9 @@ label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
   width: 370px;
   height: 386px;
@@ -2259,43 +2416,66 @@ label {
   /* Полноразмерная текстовая область */
   /* Когда текстовая область получит фокус, сделайте что-нибудь */
   /* Установите стиль для кнопки отправить/кнопка */
-  /* Добавьте красный цвет фона к кнопке отмена */
+  /* Добавьте цвет фона к кнопке отмена */
   /* Добавьте некоторые эффекты наведения на кнопки */
 }
 
+.feedback .feedback_chat .feedback_chat_img_tell {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #00aeef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback .feedback_chat .feedback_chat_img_tell svg {
+  fill: #fff;
+  height: 25px;
+}
+
 .feedback .feedback_chat .feedback_chat_heading {
-  position: absolute;
-  left: 30%;
-  top: 15%;
   -webkit-transform: translate(-30% -15%);
       -ms-transform: translate(-30% -15%);
           transform: translate(-30% -15%);
   color: #333333;
   font-size: 30px;
   text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-top: 25px;
 }
 
 .feedback .feedback_chat .feedback_chat_subtitle {
-  position: absolute;
-  left: 40%;
-  top: 35%;
   -webkit-transform: translate(-40% -35%);
       -ms-transform: translate(-40% -35%);
           transform: translate(-40% -35%);
   color: #333333;
   font-size: 24px;
   text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .feedback .feedback_chat .feedback_chat_tel {
-  position: absolute;
-  left: 30%;
-  top: 50%;
   -webkit-transform: translate(-30% -50%);
       -ms-transform: translate(-30% -50%);
           transform: translate(-30% -50%);
   color: #333333;
   font-size: 24px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 45px;
 }
 
 .feedback .feedback_chat .open-button {
@@ -2305,10 +2485,6 @@ label {
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  position: absolute;
-  bottom: 52px;
-  right: 122px;
-  width: 135px;
 }
 
 .feedback .feedback_chat .chat-popup {

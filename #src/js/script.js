@@ -44,17 +44,11 @@ $( document ).ready(function(){
     });
   });
 
-  // function openForm() {
-  //       document.getElementById("arc").style.display = "block";
-  //     }
-  //     function closeForm() {
-  //       document.getElementById("arc").style.display = "none";
-  //     }
+  function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
 
-  //     var canvas=document.getElementById('arc');
-  //     var ctx = canvas.getContext('2d');
-      
-  //     ctx.lineWidth = 5; // толщина линии
-      
-  //     ctx.arc(415,415,100,0, Math.PI,true);
-  //     ctx.stroke();
+  

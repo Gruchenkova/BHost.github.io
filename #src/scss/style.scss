@@ -257,7 +257,10 @@ header nav {
 		}
 	}
 }
-
+.button_start{
+	position: relative;
+	
+}
 .wr-home button{
 	margin-top: 20px;
 	width: 133px;
@@ -266,11 +269,40 @@ header nav {
 	background-color: #00aeef;
 	border-style: ridge ridge solid ridge;
 	border-color: #fff #fff #00aeef #fff ;
+	position: absolute;
+	top: 0%;
+	left: -65px;
+	transform: translate(-0%, -0%);
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: .5s;
+	box-shadow: 0 5px 20px rgba(0,0,0, .5);
+	overflow: hidden;
 	span {
-		font-size: 13px;
-		
+		font-size: 13px;	
 	}
 }
+.start::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to left, #9d35c0, #31aae2);
+	color: #fff;
+	z-index: -1;
+	/* border-radius: 60px; */
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .5s ease-in-out;
+  }
+  .start:hover::before {
+	transform: scaleX(1);
+	transform-origin: left;
+  }
 
 .wr-experiensed {
 	margin-top: 120px;
@@ -609,31 +641,23 @@ input[type="search"] {
 	margin-top: 75px;
   }
   .build_circle {
-	  width: 70px;
-	  height: 70px;
+	width: 70px;
+	height: 70px;
 	border-radius: 50%;
 	border: 1px dotted #00aeef;
 	text-align: center;
 	font-size: 24px;
 	color: #00aeef;
-	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
   }
   .line {
 	margin-top: 35px;
 	width: 380px;
 	border-top: 1px dashed #00aeef;
   }
-//   .circle_center {
-//    width: 70px;
-// 	  height: 70px;
-// 	border-radius: 50%;
-// 	border: 1px dashed #00aeef;
-// 	text-align: center;
-// 	font-size: 24px;
-// 	color: #fff;
-// 	background: linear-gradient(to left, #9d35c0, #31aae2);
-//   }
-
   .benefits_svg {
 	display: flex;
 	flex-direction: row;
@@ -911,20 +935,68 @@ input[type="search"] {
 	}
 }
 
+.tabs {
+	margin-top: 120px;
+	margin-bottom: 120px;
+	.tabs_title {
+		font-size: 30px;
+		padding-bottom: 75px;
+		text-transform: uppercase;
+	}
+	.better_company {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 50px;
+		.inner_company_tab {
+			display: flex;
+			flex-direction: row;
+			justify-content: start;
+			label {
+				color: #333;
+				font-size: 15px;
+				text-transform: uppercase;
+				width: 130px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				margin: 0 auto;
+			}
+		}
+		 .company_tab input,
+		 .company_tab_content { 
+			display:none; 
+			.content_title {
+				font-size: 20px;
+				color: #333333;
+			}
+			.company_tab_content_text {
+				font-size: 15px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+			}
+	}
+		.company_tab_title {
+		  display:block;
+		  cursor:pointer;
+		}
+		.company_tab :checked + .company_tab_title {
+			background: linear-gradient(to left, #9d35c0, #31aae2);
+			color: #fff;
+			text-transform: uppercase;
+		}
+		.company_tab :checked ~ .company_tab_content {
+		  display:block;
+		  max-width: 650px;
+		  position: absolute;
+		  left: 70px;
+		}
+		img.tabs_img {
+			max-width: 330px;
+			margin-bottom: 30px;
+			padding-top: 80px;
+		}
+	  }
+	}
 
 
 
@@ -946,7 +1018,6 @@ input[type="search"] {
 		align-items: center;
 		.inner_result_svg {
 		position: relative;
-		// padding-bottom: 35px;
 		width: 85px;
     	height: 65px;
 		}
@@ -957,7 +1028,6 @@ input[type="search"] {
 			position: absolute;
 			top: 0;
 			left: 0;
-			// transform: translate(-50% -50%);
 		}
 		.user_plus, .cloud_basket {
 			position: absolute;
@@ -1056,6 +1126,7 @@ input[type="search"] {
 			margin-right: 30px;
 			max-width: 370px;
 			position: relative;
+			background: #fff;
 			img {
 				overflow: hidden;
 				max-height: 280px;
@@ -1166,7 +1237,7 @@ input[type="search"] {
 				}
 			}
 			.accordion {
-				max-width: 770px;
+				width: 770px;
 				padding-right: 100px;
 				label {
 					color: #333;
@@ -1177,19 +1248,16 @@ input[type="search"] {
 			.tab input, .tab-content { display: none; }
 			.tab {
 				/* font: Параметры шрифта
-				border: 1px solid #e9eaec; Параметры рамки */
+				border:  Параметры рамки */
 				border-left: 15px solid #00aeef;
-				/* border-radius: 3px; */ /* Скругляем уголки */
-				color: #333; /* Цвет текста */
+				color: #333; 
 				margin-bottom: 20px; /* Расстояние между пунктами */
 			}
 			
 			.tab-title {
 				padding: 10px; /* Поля вокруг текста */
 				display: block; /* Блочный элемент */
-				/* text-transform: uppercase; */ /* Все буквы заглавные */
-				/* font-weight: bold; */ /* Жирное начертание */
-				cursor: pointer; /* Вид курсора */
+				cursor: pointer; 
 			}
 			.tab-title::after {
 				content: '+'; /* Выводим плюс */
@@ -1206,6 +1274,7 @@ input[type="search"] {
 			}
 			.tab-content {
 				padding: 10px 20px; /* Поля вокруг текста */
+				max-width: 770px;
 			}
 			.tab :checked + .tab-title {
 				background-color: #fff; /* Цвет фона */
@@ -1217,6 +1286,7 @@ input[type="search"] {
 			}
 			.tab :checked ~ .tab-content {
 				display: block; /* Показываем содержимое */
+				max-width: 770px;
 			}
 		}
 	}
@@ -1225,7 +1295,6 @@ input[type="search"] {
 	padding-top: 120px;
 	padding-bottom: 120px;
 	background: linear-gradient(to left, #9d35c0, #31aae2);
-	// position: relative;
 	.h4 {
 		color: #fff;
 		font-size: 30px;
@@ -1398,38 +1467,51 @@ input[type="search"] {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		background: #fff;
 		width: 370px;
 		height: 386px;
 		position: absolute;
 		right: 0;
 		top: 150px;
+		.feedback_chat_img_tell {
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: #00aeef;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			svg {
+				fill: #fff;
+				height: 25px;
+			}
+		}
 		
 		.feedback_chat_heading {
-			position: absolute;
-			left: 30%;
-			top: 15%;
 			transform: translate(-30% -15%);
 			color: #333333;
 			font-size: 30px;
 			text-transform: uppercase;
+			margin-bottom: 15px;
+			margin-top: 25px;
 		}
 		.feedback_chat_subtitle {
-			position: absolute;
-			left: 40%;
-			top: 35%;
 			transform: translate(-40% -35%);
 			color: #333333;
 			font-size: 24px;
 			text-transform: uppercase;
+			margin-top: 5px;
+			margin-bottom: 10px;
 		}
 		.feedback_chat_tel {
-			position: absolute;
-			left: 30%;
-			top: 50%;
 			transform: translate(-30% -50%);
 			color: #333333;
 			font-size: 24px;
+			text-transform: uppercase;
+			margin-top: 25px;
+			margin-bottom: 45px;
 		}
 		/* Кнопка, используемая для открытия формы чата - закреплена в нижней части страницы */
 .open-button {
@@ -1439,11 +1521,6 @@ input[type="search"] {
 	border: none;
 	cursor: pointer;
 	opacity: 0.8;
-	position: absolute;
-	// position: fixed;
-	bottom: 52px;
-	right: 122px;
-	width: 135px;
   }
   
   /* Всплывающий чат - скрыт по умолчанию */
@@ -1492,7 +1569,7 @@ input[type="search"] {
 	opacity: 0.8;
   }
   
-  /* Добавьте красный цвет фона к кнопке отмена */
+  /* Добавьте цвет фона к кнопке отмена */
   .form-container .cancel {
 	background-color: red;
 	width: 135px;
