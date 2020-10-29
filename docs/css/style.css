@@ -12,6 +12,9 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;
+
+600;700;800&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -386,38 +389,6 @@ template {
   display: none;
 }
 
-@font-face {
-  font-family: "OpenSans-Bold";
-  font-display: swap;
-  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "OpenSans-ExtraBold";
-  font-display: swap;
-  src: url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "OpenSans-Regular";
-  font-display: swap;
-  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "OpenSans-SemiBold";
-  font-display: swap;
-  src: url("../fonts/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
   background-color: #fff;
   color: #555;
@@ -458,7 +429,11 @@ a {
 button {
   cursor: pointer;
   border: none;
-  font-family: "OpenSans-SemiBold", sans-serif;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
   font-size: 16px;
   background-color: #00aeef;
   text-transform: uppercase;
@@ -515,6 +490,10 @@ a:focus {
 
 .container-custom .connection a {
   font-size: 12px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin-right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -528,12 +507,20 @@ a:focus {
           align-items: flex-end;
 }
 
+.container-custom .connection a:hover {
+  color: #00aeef;
+}
+
 .container-custom .connection svg {
   margin-right: 12px;
 }
 
 .container-custom .connection span {
   margin-left: 12px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .user-info {
@@ -571,6 +558,22 @@ a:focus {
   z-index: 0;
 }
 
+.basket:hover:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: #00aeef;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.basket svg:hover {
+  color: #fff;
+  z-index: 10;
+}
+
 .user {
   position: relative;
 }
@@ -594,8 +597,20 @@ a:focus {
   z-index: 0;
 }
 
-.basket:hover svg:hover {
+.user:hover:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: #00aeef;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.user svg:hover {
   color: #fff;
+  z-index: 10;
 }
 
 .container-custom .menu {
@@ -639,6 +654,10 @@ a.logo img {
 
 a.logo p {
   font-size: 24px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 header nav {
@@ -670,6 +689,10 @@ header nav ul {
 
 header nav ul li {
   margin-right: 55px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -697,6 +720,10 @@ header nav ul li:last-of-type {
 .wr-home h1 {
   text-align: center;
   text-transform: uppercase;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 42px;
   color: #fff;
   margin-bottom: 20px;
@@ -735,6 +762,10 @@ header nav ul li:last-of-type {
 .icon .icon_category p {
   text-align: center;
   max-width: 105px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 800;
+  font-style: normal;
   text-transform: uppercase;
   font-size: 12px;
   color: #fff;
@@ -760,6 +791,10 @@ header nav ul li:last-of-type {
   position: absolute;
   top: 25%;
   font-size: 30px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   z-index: 5;
   color: #fff;
 }
@@ -830,8 +865,6 @@ header nav ul li:last-of-type {
       -ms-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
   text-align: center;
-  color: #fff;
-  text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: .5s;
   -o-transition: .5s;
@@ -902,12 +935,20 @@ header nav ul li:last-of-type {
 }
 
 .wr-experiensed .text h2 {
-  font-size: 25px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
   color: #333333;
   margin-top: -5px;
 }
 
 .wr-experiensed .text p {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
   color: #616161;
 }
@@ -928,22 +969,31 @@ header nav ul li:last-of-type {
 }
 
 .icon_experiensed .icon_description {
-  margin-left: 60px;
+  margin-left: 25px;
   text-align: center;
 }
 
 .icon_experiensed .icon_description p {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: #333333;
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .icon_experiensed .icon_description span {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #6b6b6b;
   font-size: 15px;
 }
 
 .icon_experiensed_cat_top_left {
+  padding-right: 80px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1103,14 +1153,23 @@ header nav ul li:last-of-type {
 .inner_search h3 {
   margin-top: 60px;
   margin-bottom: 30px;
-  font-size: 24px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
   color: #fff;
   text-transform: uppercase;
 }
 
 .inner_search p {
   text-transform: capitalize;
-  font-size: 16px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #616161;
   color: #fff;
   margin-bottom: 50px;
 }
@@ -1300,6 +1359,12 @@ input[type="search"] {
 }
 
 label {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #616161;
   color: #fff;
   margin-left: 50px;
 }
@@ -1311,13 +1376,22 @@ label {
 }
 
 .build_website h4 {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 30px;
+  color: #fff;
   text-transform: uppercase;
   color: #333;
   margin-bottom: 30px;
 }
 
 .build_website .subtitle {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
   color: #616161;
   max-width: 680px;
@@ -1425,14 +1499,22 @@ label {
 }
 
 .build_slogan p.title {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 24px;
   text-transform: uppercase;
   color: #333333;
 }
 
 .build_slogan .slogan_description {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
-  color: #898989;
+  color: #616161;
 }
 
 .what_makes_website {
@@ -1441,13 +1523,22 @@ label {
 }
 
 .what_makes_website h5 {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 30px;
+  color: #fff;
   text-transform: uppercase;
   color: #333;
   margin-bottom: 30px;
 }
 
 .what_makes_website .subtitle {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
   color: #616161;
   margin-bottom: 80px;
@@ -1468,14 +1559,22 @@ label {
 }
 
 .what_makes_website .benefits_what_makes .title {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 18px;
   color: #333333;
   text-transform: uppercase;
 }
 
 .what_makes_website .benefits_what_makes .slogan_description {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
-  color: #656565;
+  color: #616161;
 }
 
 .what_makes_website .benefits_what_makes svg {
@@ -1588,13 +1687,22 @@ label {
 }
 
 .choose_package h6 {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 30px;
+  color: #fff;
   text-transform: uppercase;
   color: #333;
   margin-bottom: 15px;
 }
 
 .choose_package .subtitle {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
   color: #616161;
   margin-top: 15px;
@@ -1648,6 +1756,10 @@ label {
 .choose_package .choose_main .choose_inner p {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 24px;
   color: #4d4d4d;
   text-transform: uppercase;
@@ -1655,7 +1767,12 @@ label {
 
 .choose_package .choose_main .choose_inner span {
   max-width: 510px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
+  color: #616161;
 }
 
 .choose_package .choose_main .choose_inner .choose_package_content {
@@ -1710,6 +1827,12 @@ label {
 }
 
 .choose_package .choose_main .choose_inner .choose_package_content ul li {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #616161;
   position: relative;
   margin-bottom: 30px;
 }
@@ -1751,15 +1874,24 @@ label {
 }
 
 .website_builder_description .buider_h1 {
-  color: #fff;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 30px;
+  color: #fff;
   text-transform: uppercase;
   padding-bottom: 35px;
 }
 
 .website_builder_description p {
-  color: #fff;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
+  color: #616161;
+  color: #fff;
 }
 
 .tabs {
@@ -1768,9 +1900,14 @@ label {
 }
 
 .tabs .tabs_title {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 30px;
-  padding-bottom: 75px;
+  color: #fff;
   text-transform: uppercase;
+  padding-bottom: 75px;
 }
 
 .tabs .better_company {
@@ -1801,6 +1938,10 @@ label {
 }
 
 .tabs .better_company .inner_company_tab label {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #333;
   font-size: 15px;
   text-transform: uppercase;
@@ -1818,13 +1959,22 @@ label {
 
 .tabs .better_company .company_tab input .content_title,
 .tabs .better_company .company_tab_content .content_title {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 20px;
   color: #333333;
 }
 
 .tabs .better_company .company_tab input .company_tab_content_text,
 .tabs .better_company .company_tab_content .company_tab_content_text {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 15px;
+  color: #616161;
 }
 
 .tabs .better_company .company_tab_title {
@@ -1929,11 +2079,19 @@ label {
 }
 
 .result p.number {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 40px;
   color: #fff;
 }
 
 .result p.result_description {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 24px;
   color: #fff;
   text-transform: uppercase;
@@ -2010,6 +2168,10 @@ label {
 }
 
 .about_us .wr_about_us .inner_about_us .our_name {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding-top: 35px;
   font-size: 15px;
   color: #b0b0b0;
@@ -2018,6 +2180,10 @@ label {
 }
 
 .about_us .wr_about_us .inner_about_us .h3 {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   padding-top: 20px;
   font-size: 18px;
   color: #666666;
@@ -2027,8 +2193,12 @@ label {
 
 .about_us .wr_about_us .inner_about_us .h3_discription {
   padding-top: 25px;
-  font-size: 14px;
-  color: #6b6b6b;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #616161;
   padding-left: 25px;
   padding-right: 47px;
 }
@@ -2054,6 +2224,10 @@ label {
 }
 
 .about_us .wr_about_us .inner_about_us .date {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   position: absolute;
   left: 7%;
   top: 32%;
@@ -2093,9 +2267,14 @@ label {
 }
 
 .questions .wr-questions .h4 {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 30px;
-  color: #333;
+  color: #fff;
   text-transform: uppercase;
+  color: #333;
   padding-bottom: 80px;
 }
 
@@ -2114,6 +2293,10 @@ label {
 }
 
 .questions .wr-questions .inner_questions .categories .contents_questions {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   margin-top: 0;
   margin-bottom: 40px;
   color: #033333;
@@ -2128,6 +2311,12 @@ label {
 
 .questions .wr-questions .inner_questions .categories li a {
   cursor: pointer;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #616161;
   color: #666666;
   font-size: 14px;
 }
@@ -2138,6 +2327,13 @@ label {
 }
 
 .questions .wr-questions .inner_questions .accordion label {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #616161;
+  font-size: 16px;
   color: #333;
   position: relative;
 }
@@ -2186,6 +2382,12 @@ label {
   padding: 10px 20px;
   /* Поля вокруг текста */
   max-width: 770px;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #616161;
 }
 
 .questions .wr-questions .inner_questions .tab :checked + .tab-title {
@@ -2217,13 +2419,21 @@ label {
 }
 
 .feedback .h4 {
-  color: #fff;
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: normal;
   font-size: 30px;
-  padding-bottom: 35px;
+  color: #fff;
   text-transform: uppercase;
+  padding-bottom: 35px;
 }
 
 .feedback p.feedback_subtitle {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding-bottom: 45px;
   font-size: 13px;
   text-transform: uppercase;
@@ -2449,6 +2659,10 @@ label {
   -webkit-transform: translate(-30% -15%);
       -ms-transform: translate(-30% -15%);
           transform: translate(-30% -15%);
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #333333;
   font-size: 30px;
   text-transform: uppercase;
@@ -2460,6 +2674,10 @@ label {
   -webkit-transform: translate(-40% -35%);
       -ms-transform: translate(-40% -35%);
           transform: translate(-40% -35%);
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #333333;
   font-size: 24px;
   text-transform: uppercase;
@@ -2471,6 +2689,10 @@ label {
   -webkit-transform: translate(-30% -50%);
       -ms-transform: translate(-30% -50%);
           transform: translate(-30% -50%);
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #333333;
   font-size: 24px;
   text-transform: uppercase;
@@ -2500,6 +2722,15 @@ label {
   max-width: 280px;
   padding: 10px;
   background-color: white;
+}
+
+.feedback .feedback_chat .form-container .titel {
+  font-family: "Open Sans";
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  color: #616161;
 }
 
 .feedback .feedback_chat .form-container textarea {

@@ -13,6 +13,20 @@
 @import "fonts";
 @import "settings";
 
+@mixin main_title {
+	@include font_Bold;
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;	
+}
+@mixin main_text {
+	@include font_Regular;
+	font-size: 15px;
+	color: #616161;	
+}
+
+$gradient: linear-gradient(to left, #9d35c0, #31aae2);
+
 .wr-preview {
     background-image: url(../img/background1.jpg);
     background-size: cover;
@@ -42,21 +56,21 @@
 		top: 17px;
 		a {
 			font-size: 12px;
+			@include font_Regular;
 			margin-right: 50px;
 			display: flex;
 			flex-direction: row;
 			align-items: flex-end;
-			// @include font("OpenSans-Regular", "OpenSans-Regular", "400", "normal") 
+		}
+		a:hover {
+			color: #00aeef;
 		}
 		svg {
 			margin-right: 12px;
 		}
 		span {
 			margin-left: 12px;
-			// @font-face {
-			// 	font-family: "OpenSans-Bold";
-			// 	src: url(../fonts/);
-			// } 
+			@include font_Regular;
 		}
 	}
 }
@@ -90,7 +104,20 @@
     border-radius: 50%;
     z-index: 0;
 }
-
+.basket:hover:before {
+	 content: "";
+    width:26px;
+    height: 26px;
+    background: #00aeef;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    z-index: 0;
+}
+.basket svg:hover {
+		color: #fff;
+		z-index:10;
+	}
 .user {
 	position: relative;
 	svg {
@@ -112,13 +139,21 @@
     border-radius: 50%;
     z-index: 0;
 }
-
-.basket:hover {
-	
-	svg:hover {
-		color: #fff;
-	}
+.user:hover:before {
+	 content: "";
+    width:26px;
+    height: 26px;
+    background: #00aeef;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    z-index: 0;
 }
+.user svg:hover {
+		color: #fff;
+		z-index:10;
+	}
+
 
 .container-custom .menu{
     width: 100%;
@@ -143,7 +178,7 @@ a.logo {
 	}
 	p {
 		font-size: 24px;
-		// @include font("OpenSans-Regular", "OpenSans-Regular", "400", "normal");
+		@include font_Bold;
 	}
 }
 
@@ -158,6 +193,7 @@ header nav {
 		justify-content: center;
 		li {
 			margin-right: 55px;
+			@include font_Regular;
 			font-size: 14px;
 			text-transform: uppercase;
 			&:last-of-type {
@@ -177,7 +213,7 @@ header nav {
 	h1 {
 		text-align: center;
 		text-transform: uppercase;
-		// @include font("OpenSans-Bold", "OpenSans-Bold", "400", "normal");
+		@include font_Bold;
 		font-size: 42px;
 		color: #fff;
 		margin-bottom: 20px;
@@ -199,6 +235,7 @@ header nav {
 		p {
 			text-align: center;
 			max-width: 105px;
+			@include font_ExtraBold;
 			text-transform: uppercase;
 			font-size: 12px;
 			color: #fff;
@@ -214,6 +251,7 @@ header nav {
 				position: absolute;
 				top: 25%;
 				font-size: 30px;
+				@include font_Bold;
 				z-index: 5;
 				color: #fff;
 			}
@@ -274,8 +312,6 @@ header nav {
 	left: -65px;
 	transform: translate(-0%, -0%);
 	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
 	text-decoration: none;
 	transition: .5s;
 	box-shadow: 0 5px 20px rgba(0,0,0, .5);
@@ -291,7 +327,7 @@ header nav {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to left, #9d35c0, #31aae2);
+	background: $gradient;
 	color: #fff;
 	z-index: -1;
 	/* border-radius: 60px; */
@@ -317,13 +353,13 @@ header nav {
 .wr-experiensed .text {
 	max-width: 550px;
 	h2 {
-		font-size: 25px;
+		@include font_SemiBold;
+		font-size: 24px;
 		color: #333333;
 		margin-top: -5px;
 	}
 	p {
-		font-size: 15px;
-		color: #616161;
+		@include main_text;
 	}
 }
 
@@ -335,14 +371,16 @@ header nav {
 	flex-direction: column;
     flex-wrap: wrap;
 	.icon_description {
-		margin-left: 60px;
+		margin-left: 25px;
 		text-align: center;
 		p {
+			@include font_Bold;
 			color: #333333;
 			font-size: 16px;
 			text-transform: uppercase;
 		}
 		span {
+			@include font_SemiBold;
 			color: #6b6b6b;
 			font-size: 15px;
 		}
@@ -350,6 +388,7 @@ header nav {
 }
 
 	.icon_experiensed_cat_top_left {
+		padding-right: 80px;
 		margin-bottom: 30px;
 		display: flex;
 		flex-direction: row;
@@ -446,13 +485,11 @@ header nav {
 	h3 {
 		margin-top: 60px;
 		margin-bottom: 30px;
-		font-size: 24px;
-		color: #fff;
-		text-transform: uppercase;
+		@include main_title;
 	}
 	p {
 		text-transform: capitalize;
-		font-size: 16px;
+		@include main_text;
 		color: #fff;
 		margin-bottom: 50px;
 	}
@@ -532,7 +569,7 @@ header nav {
   	border: none;
   	border-radius: 30px;
 	cursor: pointer;
-	background: linear-gradient(to left, #9d35c0, #31aae2);
+	background: $gradient;
 	/* добавляем прозрачность кнопке отправки */
 	opacity: 1;
 }
@@ -614,6 +651,7 @@ input[type="search"] {
 	z-index: 100;
   }
   label {
+	@include main_text;
 	color: #fff;
 	margin-left: 50px;
   }
@@ -623,14 +661,12 @@ input[type="search"] {
 	  padding-top: 120px;
 	  text-align: center;
 	  h4 {
-		font-size: 30px;
-		text-transform: uppercase;
+		@include main_title;
 		color: #333;
 		margin-bottom: 30px;
 	  }
 	  .subtitle {
-		  font-size: 15px;
-		  color: #616161;
+		@include main_text;
 		  max-width: 680px;
 	  }
   }
@@ -686,7 +722,7 @@ input[type="search"] {
 	  text-align: center;
 	  font-size: 24px;
 	  color: #fff;
-	  background: linear-gradient(to left, #9d35c0, #31aae2);
+	  background: $gradient;
 	}
   }
 
@@ -702,13 +738,13 @@ input[type="search"] {
 		margin-left: 180px;
 	}
 	p.title {
+		@include font_SemiBold;
 		font-size: 24px;
 		text-transform: uppercase;
 		color: #333333;
 	}
 	.slogan_description {
-		font-size: 15px;
-		color: #898989;
+		@include main_text;
 	  }
   }
 
@@ -716,14 +752,12 @@ input[type="search"] {
 	margin-top: 120px;
 	margin-bottom: 120px;
 	h5 {
-		font-size: 30px;
-		text-transform: uppercase;
+		@include main_title;
 		color: #333;
 		margin-bottom: 30px;
 	  }
 	  .subtitle {
-		  font-size: 15px;
-		  color: #616161;
+		@include main_text;
 		  margin-bottom: 80px;
 	  }
 	  .benefits_what_makes {
@@ -732,13 +766,13 @@ input[type="search"] {
 		  justify-content: center;
 		  text-align: center;
 		.title {
+			@include font_SemiBold;
 			font-size: 18px;
 			color: #333333;
 			text-transform: uppercase;
 		}
 		.slogan_description {
-			font-size: 15px;
-			color: #656565;
+			@include main_text;
 		}
 		svg {
 			fill: url(#grad2) #9d35c0;
@@ -806,14 +840,12 @@ input[type="search"] {
 .choose_package {
 	padding-bottom: 120px;
 	h6 {
-		font-size: 30px;
-		text-transform: uppercase;
+		@include main_title;
 		color: #333;
 		margin-bottom: 15px;
 	  }
 	.subtitle {
-		  font-size: 15px;
-		  color: #616161;
+		@include main_text;
 		  margin-top: 15px;
 		  margin-bottom: 40px;
 		  max-width: 705px;
@@ -846,13 +878,14 @@ input[type="search"] {
 			p {
 				margin-top: 0;
 				margin-bottom: 0;
+				@include font_SemiBold;
 				font-size: 24px;
 				color: #4d4d4d;
 				text-transform: uppercase;
 			}
 			span {
 				max-width: 510px;
-				font-size: 15px;
+				@include main_text;
 			}
 			.choose_package_content {
 				padding-top: 35px;
@@ -890,6 +923,7 @@ input[type="search"] {
 				list-style: none;
 				padding-left: 73px;
 				li {
+					@include main_text;
 					position: relative;
 					margin-bottom: 30px;
 				}
@@ -917,21 +951,20 @@ input[type="search"] {
 }
 
 .website_builder_description {
-	background: linear-gradient(to left, #9d35c0, #31aae2);
+	background: $gradient;
 	width: 50%;
 	align-items: center;
 	padding-top: 80px;
 	padding-bottom: 90px;
 	padding-left: 120px;
 	.buider_h1 {
-		color: #fff;
-		font-size: 30px;
-		text-transform: uppercase;
+		@include main_title;
 		padding-bottom: 35px;
 	}
 	p {
+		@include main_text;
 		color: #fff;
-		font-size: 15px;
+		
 	}
 }
 
@@ -939,9 +972,8 @@ input[type="search"] {
 	margin-top: 120px;
 	margin-bottom: 120px;
 	.tabs_title {
-		font-size: 30px;
+		@include main_title;
 		padding-bottom: 75px;
-		text-transform: uppercase;
 	}
 	.better_company {
 		display: flex;
@@ -953,6 +985,7 @@ input[type="search"] {
 			flex-direction: row;
 			justify-content: start;
 			label {
+				@include font_SemiBold;
 				color: #333;
 				font-size: 15px;
 				text-transform: uppercase;
@@ -967,11 +1000,12 @@ input[type="search"] {
 		 .company_tab_content { 
 			display:none; 
 			.content_title {
+				@include font_SemiBold;
 				font-size: 20px;
 				color: #333333;
 			}
 			.company_tab_content_text {
-				font-size: 15px;
+				@include main_text;
 
 			}
 	}
@@ -980,7 +1014,7 @@ input[type="search"] {
 		  cursor:pointer;
 		}
 		.company_tab :checked + .company_tab_title {
-			background: linear-gradient(to left, #9d35c0, #31aae2);
+			background: $gradient;
 			color: #fff;
 			text-transform: uppercase;
 		}
@@ -1003,7 +1037,7 @@ input[type="search"] {
 .result {
 	padding-top: 120px;
 	padding-bottom: 120px;
-	background: linear-gradient(to left, #9d35c0, #31aae2);
+	background: $gradient;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -1049,10 +1083,12 @@ input[type="search"] {
 		}
 	}	
 	p.number {
+		@include font_SemiBold;
 		font-size: 40px;
 		color: #fff;
 	}
 	p.result_description {
+		@include font_SemiBold;
 		font-size: 24px;
 		color: #fff;
 		text-transform: uppercase;
@@ -1133,6 +1169,7 @@ input[type="search"] {
 				max-width: 370px;
 			}
 			.our_name {
+				@include font_Regular;
 				padding-top: 35px;
 				font-size: 15px;
 				color: #b0b0b0;
@@ -1140,6 +1177,7 @@ input[type="search"] {
 				padding-right: 47px;
 			}
 			.h3 {
+				@include font_SemiBold;
 				padding-top: 20px;
 				font-size: 18px;
 				color: #666666;
@@ -1148,8 +1186,7 @@ input[type="search"] {
 			}
 			.h3_discription {
 				padding-top: 25px;
-				font-size: 14px;
-				color: #6b6b6b;
+				@include main_text;
 				padding-left: 25px;
 				padding-right: 47px;
 			}
@@ -1165,11 +1202,12 @@ input[type="search"] {
 				font-size: 14px;
 			}
 			button:hover {
-				background: linear-gradient(to left, #9d35c0, #31aae2);
+				background: $gradient;
 				color: #fff;
 				border-radius: 5px;
 			}
 			.date {
+				@include font_SemiBold;
 				position: absolute;
 				left: 7%;
     			top: 32%;
@@ -1182,7 +1220,7 @@ input[type="search"] {
 				background: #00aeef;
 			}
 			button:hover ~ .date {
-				background: linear-gradient(to left, #9d35c0, #31aae2);
+				background: $gradient;
 			}
 			.comment {
 				cursor: pointer;
@@ -1206,9 +1244,8 @@ input[type="search"] {
 	padding-top: 120px;
 	.wr-questions {
 		.h4 {
-			font-size: 30px;
+			@include main_title;
 			color: #333;
-			text-transform: uppercase;
 			padding-bottom: 80px;
 		}
 		.inner_questions {
@@ -1218,6 +1255,7 @@ input[type="search"] {
 				margin-right: 50px;
 				
 				.contents_questions {
+					@include font_SemiBold;
 					margin-top: 0;
 					margin-bottom: 40px;
 					color: #033333;
@@ -1225,12 +1263,11 @@ input[type="search"] {
 					text-transform: uppercase;
 				}
 				li {
-					list-style-type: none;
-					
-					
+					list-style-type: none;			
 					margin-bottom: 30px;
 					a {
 						cursor: pointer;
+						@include main_text;	
 						color: #666666;
 						font-size: 14px;
 					}
@@ -1240,6 +1277,8 @@ input[type="search"] {
 				width: 770px;
 				padding-right: 100px;
 				label {
+					@include main_text;
+					font-size: 16px;
 					color: #333;
 					position: relative;
 				}
@@ -1269,12 +1308,13 @@ input[type="search"] {
 				color: #fff;
 				width:37px;
 				height:37px;
-				background: linear-gradient(to left, #9d35c0, #31aae2);
+				background: $gradient;
 				float: right; /* Размещаем по правому краю */
 			}
 			.tab-content {
 				padding: 10px 20px; /* Поля вокруг текста */
 				max-width: 770px;
+				@include main_text;
 			}
 			.tab :checked + .tab-title {
 				background-color: #fff; /* Цвет фона */
@@ -1294,14 +1334,13 @@ input[type="search"] {
 .feedback {
 	padding-top: 120px;
 	padding-bottom: 120px;
-	background: linear-gradient(to left, #9d35c0, #31aae2);
+	background: $gradient;
 	.h4 {
-		color: #fff;
-		font-size: 30px;
+		@include main_title;
 		padding-bottom: 35px;
-		text-transform: uppercase;
 	}
 	p.feedback_subtitle {
+		@include font_Regular;
 		padding-bottom: 45px;
 		font-size: 13px;
 		text-transform: uppercase;
@@ -1491,6 +1530,7 @@ input[type="search"] {
 		
 		.feedback_chat_heading {
 			transform: translate(-30% -15%);
+			@include font_SemiBold;
 			color: #333333;
 			font-size: 30px;
 			text-transform: uppercase;
@@ -1499,6 +1539,7 @@ input[type="search"] {
 		}
 		.feedback_chat_subtitle {
 			transform: translate(-40% -35%);
+			@include font_SemiBold;
 			color: #333333;
 			font-size: 24px;
 			text-transform: uppercase;
@@ -1507,6 +1548,7 @@ input[type="search"] {
 		}
 		.feedback_chat_tel {
 			transform: translate(-30% -50%);
+			@include font_SemiBold;
 			color: #333333;
 			font-size: 24px;
 			text-transform: uppercase;
@@ -1538,6 +1580,11 @@ input[type="search"] {
 	max-width: 280px;
 	padding: 10px;
 	background-color: white;
+	.titel {
+		@include font_SemiBold;
+		font-size: 16px;
+		color: #616161;
+	}
   }
   
   /* Полноразмерная текстовая область */

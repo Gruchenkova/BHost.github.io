@@ -1,4 +1,30 @@
-@include font("OpenSans-Bold", "OpenSans-Bold", "400", "normal");
-@include font("OpenSans-ExtraBold", "OpenSans-ExtraBold", "400", "normal");
-@include font("OpenSans-Regular", "OpenSans-Regular", "400", "normal");
-@include font("OpenSans-SemiBold", "OpenSans-SemiBold", "400", "normal");
+// @include font("OpenSans-Bold", "OpenSans-Bold", "400", "normal");
+// @include font("OpenSans-ExtraBold", "OpenSans-ExtraBold", "400", "normal");
+// @include font("OpenSans-Regular", "OpenSans-Regular", "400", "normal");
+// @include font("OpenSans-SemiBold", "OpenSans-SemiBold", "400", "normal");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+@mixin font_Bold {
+    font-family: "Open Sans";
+    font-family: sans-serif;
+	font-weight: 700;
+    font-style: normal;
+}
+@mixin font_ExtraBold {
+    font-family: "Open Sans";
+    font-family: sans-serif;
+	font-weight: 800;
+	font-style: normal;	
+}
+@mixin font_Regular {
+    font-family: "Open Sans";
+    font-family: sans-serif;
+	font-weight: 400;
+	font-style: normal;	
+}
+@mixin font_SemiBold {
+    font-family: "Open Sans";
+    font-family: sans-serif;
+	font-weight: 600;
+	font-style: normal;	
+}
