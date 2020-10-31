@@ -26,7 +26,7 @@
 }
 
 $gradient: linear-gradient(to left, #9d35c0, #31aae2);
-
+$colorfocus: #00aeef;
 .wr-preview {
     background-image: url(../img/background1.jpg);
     background-size: cover;
@@ -181,6 +181,9 @@ a.logo {
 		@include font_Bold;
 	}
 }
+a.logo:focus {
+	color: $colorfocus;
+}
 
 header nav {
     display: flex;
@@ -199,9 +202,51 @@ header nav {
 			&:last-of-type {
 				margin-right: 0px;
 			}
-		}
-	}
-}
+			span{
+				transition: all .5s;
+			}
+			span:nth-child(2){
+				transition-delay: .1s;
+			}
+			span:nth-child(3){
+				transition-delay: .2s;
+			}
+			span:nth-child(4){
+				transition-delay: .3s;
+			}
+			&:hover{
+				span{
+				font-weight: 900;
+				color: #00aeef;
+				}
+				span:nth-child(8) {
+					transition-delay: .7s;
+				}
+				span:nth-child(7) {
+					transition-delay: .6s;
+				}
+				span:nth-child(6) {
+					transition-delay: .5s;
+				}
+				span:nth-child(5) {
+					transition-delay: .4s;
+				}
+				span:nth-child(4){
+				transition-delay: .3s;
+				}
+				span:nth-child(3){
+				transition-delay: .2s;
+				}
+				span:nth-child(2){
+				transition-delay: .1s;
+				}
+				span:nth-child(1){
+				transition-delay: 0s;
+				}
+			}
+					}
+				}
+			}
 
 .wr-home {
     margin-top: 20px;
@@ -292,6 +337,13 @@ header nav {
 		svg {
 			width: 12px;
 			height: 11px;
+		}
+		i {
+			width: 12px;
+			height: 11px;
+		}
+		i:hover {
+			color: #a344c1;
 		}
 	}
 }
@@ -569,7 +621,7 @@ header nav {
   	border: none;
   	border-radius: 30px;
 	cursor: pointer;
-	background: $gradient;
+	background: #00aeef;
 	/* добавляем прозрачность кнопке отправки */
 	opacity: 1;
 }
@@ -577,6 +629,10 @@ header nav {
 /* при наведении курсора меняем прозрачность кнопки отправки */
 .search .submit:hover {
 	opacity: 0.8;
+	background-image: $gradient;
+}
+.search .submit:focus {
+	color: $colorfocus;
 }
 
 /* данное свойство необходимо для того, чтобы в браузерах
@@ -1165,8 +1221,8 @@ input[type="search"] {
 			background: #fff;
 			img {
 				overflow: hidden;
-				max-height: 280px;
 				max-width: 370px;
+				height: 246px;
 			}
 			.our_name {
 				@include font_Regular;
@@ -1206,6 +1262,101 @@ input[type="search"] {
 				color: #fff;
 				border-radius: 5px;
 			}
+			button:focus {
+				color: $colorfocus;;
+			}
+			.menu{
+				z-index:999;
+				position:absolute;
+				// padding:0;
+				// margin:0;
+				// right: 70px;
+				// bottom:42px;
+				list-style-type:none;
+				.share{
+				  i.fa{
+					color: #333333;
+					height:25px;
+					width:25px;
+					text-align:center;
+					line-height:25px;
+					font-size: 16px;
+				  }
+				  &:hover{
+					&.bottom {
+
+					  .submenu{
+						@for $i from 1 through 5{
+						  li:nth-child(#{$i}){
+							opacity:1;
+							top:#{$i*30}px;
+							transform:rotate(0deg);
+							transition-delay:#{$i*0.08}s;
+						  }
+						}
+					  }
+					}
+				  }
+				}
+				.submenu{
+				  list-style-type:none;
+				  padding:0;
+				  margin:0;
+				  li{
+					transition:all ease-in-out 0.5s;
+					position:absolute;
+					top: 0;
+					left: 0;
+					z-index:-1;
+					opacity:0;
+					a{
+					  color: #212121;
+					  &:hover{
+						i.fa{
+						  color:#fff;
+						}
+						&.facebook{
+						  i.fa{
+							 color: #fff;
+							background: blue;
+						  }
+						}
+						&.twitter{
+						  i.fa{
+							color: #fff;
+							background: #00aeef;
+						  }
+						}
+						&.googlePlus{
+						  i.fa{
+							color: #fff;
+							background: red;
+						  }
+						}
+						&.instagram{
+						  i.fa{
+							color: #fff;
+							background-image: linear-gradient(to top right, rgb(255, 156, 99), rgb(245, 146, 107), rgb(236, 136, 115), rgb(226, 126, 122), rgb(217, 116, 130), rgb(207, 106, 138), rgb(187, 91, 153), rgb(167, 76, 168), rgb(147, 61, 183), rgb(126, 46, 197), rgb(106, 31, 212), rgb(86, 16, 227));
+						  }
+						}
+					  }
+					}
+				  }
+				  @for $i from 1 through 4{
+					li:nth-child(#{$i}){
+					  transform:rotateX(#{$i*45}deg);
+					}
+				  }
+				  
+				}
+				&.topLeft{
+					max-width: 30px;
+					max-height: 25px;
+				    bottom:-5px;
+				    right:30px;
+				}
+			  }
+			
 			.date {
 				@include font_SemiBold;
 				position: absolute;
@@ -1424,6 +1575,10 @@ input[type="search"] {
 		/* при наведении курсора меняем прозрачность кнопки отправки */
 		.subscribe .subscribe_button:hover {
 			opacity: 0.8;
+			background-image: $gradient;
+		}
+		.subscribe .subscribe_button:focus{
+			color: $colorfocus;
 		}
 		
 		/* данное свойство необходимо для того, чтобы в браузерах
@@ -1564,7 +1719,7 @@ input[type="search"] {
 	cursor: pointer;
 	opacity: 0.8;
   }
-  
+    
   /* Всплывающий чат - скрыт по умолчанию */
   .chat-popup {
 	display: none;
@@ -1626,6 +1781,10 @@ input[type="search"] {
   /* Добавьте некоторые эффекты наведения на кнопки */
   .form-container .btn:hover, .open-button:hover {
 	opacity: 1;
+	background-image: $gradient;
   }
-	}
+  .form-container .btn:focus, .open-button:focus {
+	color: $colorfocus;
+  }
+}
 }

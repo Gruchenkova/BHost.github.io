@@ -660,6 +660,10 @@ a.logo p {
   font-style: normal;
 }
 
+a.logo:focus {
+  color: #00aeef;
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -699,6 +703,83 @@ header nav ul li {
 
 header nav ul li:last-of-type {
   margin-right: 0px;
+}
+
+header nav ul li span {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+header nav ul li span:nth-child(2) {
+  -webkit-transition-delay: .1s;
+       -o-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+header nav ul li span:nth-child(3) {
+  -webkit-transition-delay: .2s;
+       -o-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+header nav ul li span:nth-child(4) {
+  -webkit-transition-delay: .3s;
+       -o-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+header nav ul li:hover span {
+  font-weight: 900;
+  color: #00aeef;
+}
+
+header nav ul li:hover span:nth-child(8) {
+  -webkit-transition-delay: .7s;
+       -o-transition-delay: .7s;
+          transition-delay: .7s;
+}
+
+header nav ul li:hover span:nth-child(7) {
+  -webkit-transition-delay: .6s;
+       -o-transition-delay: .6s;
+          transition-delay: .6s;
+}
+
+header nav ul li:hover span:nth-child(6) {
+  -webkit-transition-delay: .5s;
+       -o-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+header nav ul li:hover span:nth-child(5) {
+  -webkit-transition-delay: .4s;
+       -o-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+header nav ul li:hover span:nth-child(4) {
+  -webkit-transition-delay: .3s;
+       -o-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+header nav ul li:hover span:nth-child(3) {
+  -webkit-transition-delay: .2s;
+       -o-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+header nav ul li:hover span:nth-child(2) {
+  -webkit-transition-delay: .1s;
+       -o-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+header nav ul li:hover span:nth-child(1) {
+  -webkit-transition-delay: 0s;
+       -o-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .wr-home {
@@ -844,6 +925,15 @@ header nav ul li:last-of-type {
 .social a svg {
   width: 12px;
   height: 11px;
+}
+
+.social a i {
+  width: 12px;
+  height: 11px;
+}
+
+.social a i:hover {
+  color: #a344c1;
 }
 
 .button_start {
@@ -1248,9 +1338,7 @@ header nav ul li:last-of-type {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  background: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
-  background: -o-linear-gradient(right, #9d35c0, #31aae2);
-  background: linear-gradient(to left, #9d35c0, #31aae2);
+  background: #00aeef;
   /* добавляем прозрачность кнопке отправки */
   opacity: 1;
 }
@@ -1259,6 +1347,13 @@ header nav ul li:last-of-type {
 
 .search .submit:hover {
   opacity: 0.8;
+  background-image: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
+  background-image: -o-linear-gradient(right, #9d35c0, #31aae2);
+  background-image: linear-gradient(to left, #9d35c0, #31aae2);
+}
+
+.search .submit:focus {
+  color: #00aeef;
 }
 
 /* данное свойство необходимо для того, чтобы в браузерах
@@ -2163,8 +2258,8 @@ label {
 
 .about_us .wr_about_us .inner_about_us img {
   overflow: hidden;
-  max-height: 280px;
   max-width: 370px;
+  height: 246px;
 }
 
 .about_us .wr_about_us .inner_about_us .our_name {
@@ -2221,6 +2316,154 @@ label {
   background: linear-gradient(to left, #9d35c0, #31aae2);
   color: #fff;
   border-radius: 5px;
+}
+
+.about_us .wr_about_us .inner_about_us button:focus {
+  color: #00aeef;
+}
+
+.about_us .wr_about_us .inner_about_us .menu {
+  z-index: 999;
+  position: absolute;
+  list-style-type: none;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .share i.fa {
+  color: #333333;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .share:hover.bottom .submenu li:nth-child(1) {
+  opacity: 1;
+  top: 30px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition-delay: 0.08s;
+       -o-transition-delay: 0.08s;
+          transition-delay: 0.08s;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .share:hover.bottom .submenu li:nth-child(2) {
+  opacity: 1;
+  top: 60px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition-delay: 0.16s;
+       -o-transition-delay: 0.16s;
+          transition-delay: 0.16s;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .share:hover.bottom .submenu li:nth-child(3) {
+  opacity: 1;
+  top: 90px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition-delay: 0.24s;
+       -o-transition-delay: 0.24s;
+          transition-delay: 0.24s;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .share:hover.bottom .submenu li:nth-child(4) {
+  opacity: 1;
+  top: 120px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition-delay: 0.32s;
+       -o-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .share:hover.bottom .submenu li:nth-child(5) {
+  opacity: 1;
+  top: 150px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li {
+  -webkit-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li a {
+  color: #212121;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li a:hover i.fa {
+  color: #fff;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li a:hover.facebook i.fa {
+  color: #fff;
+  background: blue;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li a:hover.twitter i.fa {
+  color: #fff;
+  background: #00aeef;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li a:hover.googlePlus i.fa {
+  color: #fff;
+  background: red;
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li a:hover.instagram i.fa {
+  color: #fff;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff9c63), color-stop(#f5926b), color-stop(#ec8873), color-stop(#e27e7a), color-stop(#d97482), color-stop(#cf6a8a), color-stop(#bb5b99), color-stop(#a74ca8), color-stop(#933db7), color-stop(#7e2ec5), color-stop(#6a1fd4), to(#5610e3));
+  background-image: -o-linear-gradient(bottom left, #ff9c63, #f5926b, #ec8873, #e27e7a, #d97482, #cf6a8a, #bb5b99, #a74ca8, #933db7, #7e2ec5, #6a1fd4, #5610e3);
+  background-image: linear-gradient(to top right, #ff9c63, #f5926b, #ec8873, #e27e7a, #d97482, #cf6a8a, #bb5b99, #a74ca8, #933db7, #7e2ec5, #6a1fd4, #5610e3);
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li:nth-child(1) {
+  -webkit-transform: rotateX(45deg);
+          transform: rotateX(45deg);
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li:nth-child(2) {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li:nth-child(3) {
+  -webkit-transform: rotateX(135deg);
+          transform: rotateX(135deg);
+}
+
+.about_us .wr_about_us .inner_about_us .menu .submenu li:nth-child(4) {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.about_us .wr_about_us .inner_about_us .menu.topLeft {
+  max-width: 30px;
+  max-height: 25px;
+  bottom: -5px;
+  right: 30px;
 }
 
 .about_us .wr_about_us .inner_about_us .date {
@@ -2516,6 +2759,13 @@ label {
 
 .feedback .wr-subscribe .subscribe .subscribe_button:hover {
   opacity: 0.8;
+  background-image: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
+  background-image: -o-linear-gradient(right, #9d35c0, #31aae2);
+  background-image: linear-gradient(to left, #9d35c0, #31aae2);
+}
+
+.feedback .wr-subscribe .subscribe .subscribe_button:focus {
+  color: #00aeef;
 }
 
 .feedback .wr-subscribe input[type="text"] {
@@ -2767,6 +3017,14 @@ label {
 .feedback .feedback_chat .form-container .btn:hover,
 .feedback .feedback_chat .open-button:hover {
   opacity: 1;
+  background-image: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
+  background-image: -o-linear-gradient(right, #9d35c0, #31aae2);
+  background-image: linear-gradient(to left, #9d35c0, #31aae2);
+}
+
+.feedback .feedback_chat .form-container .btn:focus,
+.feedback .feedback_chat .open-button:focus {
+  color: #00aeef;
 }
 
 .webp .wr-preview{ background-image: url(../img/background1.webp); }
