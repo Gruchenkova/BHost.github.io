@@ -52,3 +52,9 @@ $( document ).ready(function(){
       }
 
   
+$('.slick_slider').slick({
+  dots: true,
+  dotsClass: "my-dots",
+  slidesToShow: 1,
+  slidesToScroll: 1,
+})
