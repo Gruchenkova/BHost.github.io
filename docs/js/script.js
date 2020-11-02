@@ -58,3 +58,10 @@ $('.slick_slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
 })
+
+$('.slider_icon').slick({
+   slidesToShow: 4,
+  slidesToScroll: 1,
+  nextArrow: '<div class="sprite-next"><i class="fas fa-angle-right"></i></div>', // Кастомная стрелка "далее"
+  prevArrow: '<div class="sprite-prev"><i class="fas fa-angle-left"></i></div>', // Кастомная стрелка "назад"
+})
