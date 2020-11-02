@@ -1114,7 +1114,8 @@ input[type="search"] {
 				@include main_text;
 
 			}
-	}
+		}
+	
 		.company_tab_title {
 		  display:block;
 		  cursor:pointer;
@@ -1129,6 +1130,11 @@ input[type="search"] {
 		  max-width: 650px;
 		  position: absolute;
 		  left: 70px;
+		}
+		.company_tab :hover ~ .company_tab_title {
+			background: $gradient;
+			opacity: 0.7;
+			color: #fff;
 		}
 		img.tabs_img {
 			max-width: 330px;
@@ -1318,10 +1324,6 @@ input[type="search"] {
 			.menu{
 				z-index:999;
 				position:absolute;
-				// padding:0;
-				// margin:0;
-				// right: 70px;
-				// bottom:42px;
 				list-style-type:none;
 				.share{
 				  i.fa{
@@ -1718,6 +1720,7 @@ input[type="search"] {
 		position: absolute;
 		right: 0;
 		top: 150px;
+		z-index: 100;
 		.feedback_chat_img_tell {
 			width: 70px;
 			height: 70px;
@@ -1777,7 +1780,7 @@ input[type="search"] {
 	bottom: 0;
 	right: 15px;
 	border: 3px solid #f1f1f1;
-	z-index: 9;
+	z-index: 40;
   }
   
   /* Добавление стилей в контейнер формы */
@@ -1902,7 +1905,7 @@ footer {
 	} 
 	.wr-footer {
 		display: grid;
-		grid-template-rows: /* [header] */ 30px /* [body] */ 125px 60px 30px 125px 60px 55px 15px;
+		grid-template-rows: 30px 125px 60px 30px 125px 60px 55px 15px;
 		grid-template-columns: repeat(4, 1fr) ;		
 		font-size: 13px; 
 		column-gap: 100px;
@@ -1916,63 +1919,63 @@ footer {
 			}
 		}
 		.one {
-			grid-row: /* header */ 2;
+			grid-row: 2;
 			grid-column: 1;
 			img {
 				padding-bottom: 15px;
 			  }
 		  }
 		  .two {
-			grid-row: /* header */ 1;
+			grid-row: 1;
 			  grid-column: 2;
 		  }
 		  .two_inner {
-			grid-row: /* header */ 2;
+			grid-row: 2;
 			  grid-column: 2;
 		  }
 		  .three {
-			 grid-row: /* header */ 1;
+			 grid-row: 1;
 			  grid-column: 3;
 		 }
 		 .one_inner {
-			grid-row: /* header */ 2;
+			grid-row: 2;
 			grid-column: 3;
 		 }
 		 .contact {
-			grid-row: /* header */ 2;
+			grid-row: 2;
 			grid-column: 3;
 		 }
 		  .opening_hours {
-			 grid-row: /* header */ 2;
+			 grid-row: 2;
 			  grid-column: 3;	
 		  }
 		  .four {
-			 grid-row: /* header */ 1;
+			 grid-row: 1;
 			  grid-column: 4;	
 		  }
 		.imp {
 			display: flex;
-			grid-row: /* header */ 2;
+			grid-row: 2;
 			  grid-column: 4;
 			  ul:nth-child(even){
 				  margin-left: 15px;
 			  }
 		}
 		  .title {
-			 grid-row: /* header */ 4;
+			 grid-row: 4;
 			  grid-column: 1;
 		  } 
 		  .follow_us {
-			grid-row: /* header */ 5;
+			grid-row: 5;
 			grid-column: 1;
 		  }
 			.fa-facebook-f {
 				background-color: #3b5998;
 				color: #fff;
-				height: 40px;
-					width: 40px;
+				height: 30px;
+					width: 30px;
 				text-align: center;
-				line-height: 40px;
+				line-height: 30px;
 				font-size: 16px;
 			}
 			.fa-facebook-f::before {
@@ -1981,10 +1984,10 @@ footer {
 			.fa-pinterest-p {
 				background-color: #c92228;
 				color: #fff;
-				height: 40px;
-					width: 40px;
+				height: 30px;
+					width: 30px;
 				text-align: center;
-				line-height: 40px;
+				line-height: 30px;
 				font-size: 16px;
 			}
 			.fa-pinterest-p::before {
@@ -1993,10 +1996,10 @@ footer {
 			.fa-instagram {
 				background-color: #fb3958;
 				color: #fff;
-				height: 40px;
-					width: 40px;
+				height: 30px;
+					width: 30px;
 				text-align: center;
-				line-height: 40px;
+				line-height: 30px;
 				font-size: 16px;
 			}
 			.fa-instagram::before {
@@ -2005,10 +2008,10 @@ footer {
 			.fa-twitter {
 				background-color: #3cbee3;
 				color: #fff;
-				height: 40px;
-					width: 40px;
+				height: 30px;
+					width: 30px;
 				text-align: center;
-				line-height: 40px;
+				line-height: 30px;
 				font-size: 16px;
 			}
 			.fa-twitter::before {
@@ -2017,10 +2020,10 @@ footer {
 			.fa-google-plus-g {
 				background-color: #e13928;
 				color: #fff;
-				height: 40px;
-					width: 40px;
+				height: 30px;
+					width: 30px;
 				text-align: center;
-				line-height: 40px;
+				line-height: 30px;
 				font-size: 16px;
 			}
 			.fa-google-plus-g::before {

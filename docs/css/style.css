@@ -2148,6 +2148,14 @@ label {
   left: 70px;
 }
 
+.tabs .better_company .company_tab :hover ~ .company_tab_title {
+  background: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
+  background: -o-linear-gradient(right, #9d35c0, #31aae2);
+  background: linear-gradient(to left, #9d35c0, #31aae2);
+  opacity: 0.7;
+  color: #fff;
+}
+
 .tabs .better_company img.tabs_img {
   max-width: 330px;
   margin-bottom: 30px;
@@ -2926,6 +2934,7 @@ label {
   position: absolute;
   right: 0;
   top: 150px;
+  z-index: 100;
   /* Кнопка, используемая для открытия формы чата - закреплена в нижней части страницы */
   /* Всплывающий чат - скрыт по умолчанию */
   /* Добавление стилей в контейнер формы */
@@ -3021,7 +3030,7 @@ label {
   bottom: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
-  z-index: 9;
+  z-index: 40;
 }
 
 .feedback .feedback_chat .form-container {
@@ -3242,10 +3251,10 @@ footer .wr-footer .follow_us {
 footer .wr-footer .fa-facebook-f {
   background-color: #3b5998;
   color: #fff;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 16px;
 }
 
@@ -3256,10 +3265,10 @@ footer .wr-footer .fa-facebook-f::before {
 footer .wr-footer .fa-pinterest-p {
   background-color: #c92228;
   color: #fff;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 16px;
 }
 
@@ -3270,10 +3279,10 @@ footer .wr-footer .fa-pinterest-p::before {
 footer .wr-footer .fa-instagram {
   background-color: #fb3958;
   color: #fff;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 16px;
 }
 
@@ -3284,10 +3293,10 @@ footer .wr-footer .fa-instagram::before {
 footer .wr-footer .fa-twitter {
   background-color: #3cbee3;
   color: #fff;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 16px;
 }
 
@@ -3298,10 +3307,10 @@ footer .wr-footer .fa-twitter::before {
 footer .wr-footer .fa-google-plus-g {
   background-color: #e13928;
   color: #fff;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 16px;
 }
 

@@ -1,18 +1,3 @@
-// var bg = document.getElementById('one');
-// document.getElementById('first').addEventListener("mouseover", function(){bg.style.background = "linear-gradient(to left, #9d35c0, #31aae2)";
-// this.addEventListener("mouseout", function(){bg.style.background = "";});
-// });
-
-// var bg = document.getElementById('two');
-// document.getElementById('second').addEventListener("mouseover", function(){bg.style.background = "linear-gradient(to left, #9d35c0, #31aae2)";
-// this.addEventListener("mouseout", function(){bg.style.background = "";});
-// });
-
-// var bg = document.getElementById('three');
-// document.getElementById('third').addEventListener("mouseover", function(){bg.style.background = "linear-gradient(to left, #9d35c0, #31aae2)";
-// this.addEventListener("mouseout", function(){bg.style.background = "";});
-// });
-
 $( document ).ready(function(){
     $( "#first" ).hover(function(){ // задаем функцию при наведении курсора на элемент	
       $( "#one" ).css( "background", "linear-gradient(to left, #9d35c0, #31aae2)" ) // задаем цвет заднего фона
@@ -46,10 +31,10 @@ $( document ).ready(function(){
 
   function openForm() {
         document.getElementById("myForm").style.display = "block";
-      }
+      };
       function closeForm() {
         document.getElementById("myForm").style.display = "none";
-      }
+      };
 
   
 $('.slick_slider').slick({
@@ -57,11 +42,11 @@ $('.slick_slider').slick({
   dotsClass: "my-dots",
   slidesToShow: 1,
   slidesToScroll: 1,
-})
+});
 
 $('.slider_icon').slick({
    slidesToShow: 4,
   slidesToScroll: 1,
   nextArrow: '<div class="sprite-next"><i class="fas fa-angle-right"></i></div>', // Кастомная стрелка "далее"
   prevArrow: '<div class="sprite-prev"><i class="fas fa-angle-left"></i></div>', // Кастомная стрелка "назад"
-})
+});
