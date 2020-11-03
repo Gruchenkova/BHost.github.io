@@ -2219,7 +2219,7 @@ label {
 .result .inner_result .user_plus,
 .result .inner_result .cloud_basket {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 30%;
   width: 35px;
   height: 25px;
@@ -2229,8 +2229,8 @@ label {
 
 .result .inner_result .file_pdf {
   position: absolute;
-  top: 25%;
-  left: 35%;
+  top: 30%;
+  left: 30%;
   width: 30px;
   height: 30px;
   fill: #00aeef;
@@ -2595,11 +2595,19 @@ label {
           flex-direction: row;
 }
 
-.questions .wr-questions .inner_questions .categories {
-  margin-right: 50px;
+.questions .wr-questions .inner_questions .wr_tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 100%;
 }
 
-.questions .wr-questions .inner_questions .categories .contents_questions {
+.questions .wr-questions .inner_questions .wr_tabs .contents_questions {
   font-family: "Open Sans";
   font-family: sans-serif;
   font-weight: 600;
@@ -2611,12 +2619,30 @@ label {
   text-transform: uppercase;
 }
 
-.questions .wr-questions .inner_questions .categories li {
-  list-style-type: none;
-  margin-bottom: 30px;
+.questions .wr-questions .inner_questions .wr_tabs .inner_questions_tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 970px;
 }
 
-.questions .wr-questions .inner_questions .categories li a {
+.questions .wr-questions .inner_questions .wr_tabs .inner_questions_tab input {
+  display: none;
+}
+
+.questions .wr-questions .inner_questions .question_tab_title {
+  display: block;
+  cursor: pointer;
+  margin-right: 50px;
+  margin-bottom: 30px;
+  margin-left: 0;
+  color: #333;
   cursor: pointer;
   font-family: "Open Sans";
   font-family: sans-serif;
@@ -2626,6 +2652,22 @@ label {
   color: #616161;
   color: #666666;
   font-size: 14px;
+}
+
+.questions .wr-questions .inner_questions .question_tab_content {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -10%;
+}
+
+.questions .wr-questions .inner_questions .inner_questions_tab :checked + .question_tab_title {
+  color: #333;
+}
+
+.questions .wr-questions .inner_questions .inner_questions_tab :checked ~ .question_tab_content {
+  display: block;
+  max-width: 970px;
 }
 
 .questions .wr-questions .inner_questions .accordion {
@@ -2643,6 +2685,7 @@ label {
   font-size: 16px;
   color: #333;
   position: relative;
+  background-color: #f9f9f9;
 }
 
 .questions .wr-questions .inner_questions .tab input,
@@ -2671,6 +2714,7 @@ label {
   content: '+';
   /* Выводим плюс */
   position: absolute;
+  line-height: 37px;
   top: 0;
   right: -40px;
   text-align: center;
@@ -2695,6 +2739,11 @@ label {
   font-style: normal;
   font-size: 15px;
   color: #616161;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: max-width .2s;
+  -o-transition: max-width .2s;
+  transition: max-width .2s;
 }
 
 .questions .wr-questions .inner_questions .tab :checked + .tab-title {

@@ -50,3 +50,7 @@ $('.slider_icon').slick({
   nextArrow: '<div class="sprite-next"><i class="fas fa-angle-right"></i></div>', // Кастомная стрелка "далее"
   prevArrow: '<div class="sprite-prev"><i class="fas fa-angle-left"></i></div>', // Кастомная стрелка "назад"
 });
+
+$('.tab-title').on('click', function() {
+	$(this).siblings('.tab-content').slideToggle();
+});

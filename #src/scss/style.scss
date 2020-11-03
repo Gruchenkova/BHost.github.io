@@ -1177,7 +1177,7 @@ input[type="search"] {
 		}
 		.user_plus, .cloud_basket {
 			position: absolute;
-			top: 30%;
+			top: 35%;
 			left: 30%;
 			width: 35px;
 			height: 25px;
@@ -1186,8 +1186,8 @@ input[type="search"] {
 		}
 		.file_pdf {
 			position: absolute;
-			top: 25%;
-			left: 35%;
+			top: 30%;
+			left: 30%;
 			width: 30px;
 			height: 30px;
 			fill: #00aeef;
@@ -1451,12 +1451,16 @@ input[type="search"] {
 			color: #333;
 			padding-bottom: 80px;
 		}
+
 		.inner_questions {
 			display: flex;
 			flex-direction: row;
-			.categories {
-				margin-right: 50px;
-				
+
+			.wr_tabs {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				width: 100%;
 				.contents_questions {
 					@include font_SemiBold;
 					margin-top: 0;
@@ -1465,17 +1469,43 @@ input[type="search"] {
 					font-size: 16px;
 					text-transform: uppercase;
 				}
-				li {
-					list-style-type: none;			
-					margin-bottom: 30px;
-					a {
-						cursor: pointer;
-						@include main_text;	
-						color: #666666;
-						font-size: 14px;
+				.inner_questions_tab {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					width: 970px;
+					input {
+						display:none; 
 					}
 				}
 			}
+			
+			.question_tab_title {
+				display:block;
+				cursor:pointer;
+				margin-right: 50px;
+				margin-bottom: 30px;
+				margin-left: 0;
+				color: #333;
+				cursor: pointer;
+				@include main_text;	
+				color: #666666;
+				font-size: 14px;
+			  }
+			  .question_tab_content {
+				  display: none;
+				  position: absolute;
+				  top: 0;
+				  right: -10%;
+			  }
+			  .inner_questions_tab :checked + .question_tab_title {
+				  color: #333;
+			  }
+			  .inner_questions_tab :checked ~ .question_tab_content {
+				display:block;
+				max-width: 970px;
+				
+			  }
 			.accordion {
 				width: 770px;
 				padding-right: 100px;
@@ -1484,6 +1514,7 @@ input[type="search"] {
 					font-size: 16px;
 					color: #333;
 					position: relative;
+					background-color: #f9f9f9;
 				}
 			}
 			
@@ -1504,6 +1535,7 @@ input[type="search"] {
 			.tab-title::after {
 				content: '+'; /* Выводим плюс */
 				position: absolute;
+				line-height: 37px;
 				top: 0;
     			right: -40px;
 				text-align: center;
@@ -1518,6 +1550,9 @@ input[type="search"] {
 				padding: 10px 20px; /* Поля вокруг текста */
 				max-width: 770px;
 				@include main_text;
+				-webkit-transition: all 0.2s;
+				-o-transition: all 0.2s;
+				transition: max-width .2s; 
 			}
 			.tab :checked + .tab-title {
 				background-color: #fff; /* Цвет фона */
@@ -1534,6 +1569,7 @@ input[type="search"] {
 		}
 	}
 }
+
 .feedback {
 	padding-top: 120px;
 	padding-bottom: 120px;
