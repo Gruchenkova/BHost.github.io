@@ -1,30 +1,45 @@
-// @include font("OpenSans-Bold", "OpenSans-Bold", "400", "normal");
-// @include font("OpenSans-ExtraBold", "OpenSans-ExtraBold", "400", "normal");
-// @include font("OpenSans-Regular", "OpenSans-Regular", "400", "normal");
-// @include font("OpenSans-SemiBold", "OpenSans-SemiBold", "400", "normal");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@font-face {
+  font-family:'Open_Sans_Regular';
+  src: 
+  url('../fonts/Open\ Sans\ Regular.woff2') format('woff2'),
+  url('../fonts/Open\ Sans\ Regular.woff') format('woff'),
+  url('../fonts/Open\ Sans\ Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
 
-@mixin font_Bold {
-    font-family: "Open Sans";
-    font-family: sans-serif;
-	font-weight: 700;
+@font-face {
+    font-family:'Open_Sans_Bold';
+    src: url('../fonts/Open\ Sans\ Bold.woff2') format('woff2'),
+		url('../fonts/Open\ Sans\ Bold.woff') format('woff'),
+		url('../fonts/Open\ Sans\ Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
 }
-@mixin font_ExtraBold {
-    font-family: "Open Sans";
-    font-family: sans-serif;
-	font-weight: 800;
-	font-style: normal;	
+
+@font-face {
+  font-family:'Open_Sans_ExtraBold';
+src: url('../fonts/Open\ Sans\ ExtraBold.woff2') format('woff2'),
+  url('../fonts/Open\ Sans\ ExtraBold.woff') format('woff'),
+  url('../fonts/Open\ Sans\ ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
 }
-@mixin font_Regular {
-    font-family: "Open Sans";
-    font-family: sans-serif;
-	font-weight: 400;
-	font-style: normal;	
+
+@font-face {
+  font-family:'Open_Sans_SemiBold';
+  src: url('../fonts/Open\ Sans\ SemiBold.woff2') format('woff2'),
+  url('../fonts/Open\ Sans\ SemiBold.woff') format('woff'),
+  url('../fonts/Open\ Sans\ SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2074;
 }
-@mixin font_SemiBold {
-    font-family: "Open Sans";
-    font-family: sans-serif;
-	font-weight: 600;
-	font-style: normal;	
-}
+
