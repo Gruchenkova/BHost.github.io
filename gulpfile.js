@@ -110,6 +110,21 @@ function js() {
 		.pipe(browsersync.stream())
 }
 
+// function js () {
+// 	return src(["#src/js/jquery-3.5.1.min.js", "#src/js/slick.min.js", path.src.js])
+// 	.pipe(fileinclude())
+// 	// .pipe(dics(path.build.js))
+// 	.pipe(concat('script.js'))
+// 	.pipe(
+// 		uglify()
+// 	)
+// 	.pipe(
+// 		rename({
+// 			suffix: ".min"
+// 		})
+// 	)
+// }
+
 function images() {
 	return src(path.src.img)
 		.pipe(
