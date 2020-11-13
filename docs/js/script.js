@@ -1,19 +1,19 @@
 $( document ).ready(function(){
     $( "#first" ).hover(function(){ // задаем функцию при наведении курсора на элемент	
-      $( "#one" ).css( "background", "linear-gradient(to left, #9d35c0, #31aae2)" ) // задаем цвет заднего фона
+      $( ".one" ).css( "background", "linear-gradient(to left, #9d35c0, #31aae2)" ) // задаем цвет заднего фона
               .text("1").css("color", "#fff"); // задаем текстовое содержимое
       }, function(){ // задаем функцию, которая срабатывает, когда указатель выходит из элемента 	
-      $( "#one" ).css( "background", "#fff" ) // задаем цвет заднего фона
+      $( ".one" ).css( "background", "#fff" ) // задаем цвет заднего фона
               .text("1").css("color", "#00aeef"); // задаем текстовое содержимое
     });
   });
 
   $( document ).ready(function(){
     $( "#second" ).hover(function(){ // задаем функцию при наведении курсора на элемент	
-      $( "#two" ).css( "background", "linear-gradient(to left, #9d35c0, #31aae2)" ) // задаем цвет заднего фона
+      $( ".two" ).css( "background", "linear-gradient(to left, #9d35c0, #31aae2)" ) // задаем цвет заднего фона
               .text("2").css("color", "#fff"); // задаем текстовое содержимое
       }, function(){ // задаем функцию, которая срабатывает, когда указатель выходит из элемента 	
-      $( "#two" ).css( "background", "#fff" ) // задаем цвет заднего фона
+      $( ".two" ).css( "background", "#fff" ) // задаем цвет заднего фона
               .text("2").css("color", "#00aeef"); // задаем текстовое содержимое
     });
   });
@@ -21,10 +21,10 @@ $( document ).ready(function(){
 
   $( document ).ready(function(){
     $( "#third" ).hover(function(){ // задаем функцию при наведении курсора на элемент	
-      $( "#three" ).css( "background", "linear-gradient(to left, #9d35c0, #31aae2)" ) // задаем цвет заднего фона
+      $( ".three" ).css( "background", "linear-gradient(to left, #9d35c0, #31aae2)" ) // задаем цвет заднего фона
               .text("3").css("color", "#fff"); // задаем текстовое содержимое
       }, function(){ // задаем функцию, которая срабатывает, когда указатель выходит из элемента 	
-      $( "#three" ).css( "background", "#fff" ) // задаем цвет заднего фона
+      $( ".three" ).css( "background", "#fff" ) // задаем цвет заднего фона
               .text("3").css("color", "#00aeef"); // задаем текстовое содержимое
     });
   });
@@ -94,4 +94,15 @@ $(".overlay a").click(function () {
   $(".overlay").toggleClass("open");
   $("body").toggleClass("locked");
 });
+
+
+// let photo = document.getElementById('pic_inner_member1');
+// photo.onclick = function() {
+//     let block = document.getElementById('block1');
+//     block.style.display = 'block';
+
+
+
+
+
 

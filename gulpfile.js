@@ -94,36 +94,43 @@ function css() {
 		.pipe(browsersync.stream())
 }
 
-function js() {
-	return src(path.src.js)
-		.pipe(fileinclude())
-		.pipe(dest(path.build.js))
-		.pipe(
-			uglify()
-		)
-		.pipe(
-			rename({
-				extname: ".min.js"
-			})
-		)
-		.pipe(dest(path.build.js))
-		.pipe(browsersync.stream())
+// function js() {
+// 	return src(path.src.js)
+// 		.pipe(fileinclude())
+// 		.pipe(dest(path.build.js))
+// 		.pipe(
+// 			uglify()
+// 		)
+// 		.pipe(
+// 			rename({
+// 				extname: ".min.js"
+// 			})
+// 		)
+// 		.pipe(dest(path.build.js))
+// 		.pipe(browsersync.stream())
+// }
+
+let concat = require('gulp-concat');
+
+function copyJs() {
+	return src(source_folder + "/js/circular-slider.js")	
+	.pipe(dest(path.build.js))
 }
 
-// function js () {
-// 	return src(["#src/js/jquery-3.5.1.min.js", "#src/js/slick.min.js", path.src.js])
-// 	.pipe(fileinclude())
-// 	// .pipe(dics(path.build.js))
-// 	.pipe(concat('script.js'))
-// 	.pipe(
-// 		uglify()
-// 	)
-// 	.pipe(
-// 		rename({
-// 			suffix: ".min"
-// 		})
-// 	)
-// }
+function js () {
+	return src(path.src.js)
+	.pipe(concat('script.js'))
+	.pipe(fileinclude())
+	.pipe(dest(path.build.js))	
+	.pipe(uglify())
+	.pipe(
+		rename({
+			extname: ".min.js"
+		})
+	)
+	.pipe(dest(path.build.js))
+}
+
 
 function images() {
 	return src(path.src.img)
@@ -212,7 +219,7 @@ function clean(params) {
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, copyJs, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
