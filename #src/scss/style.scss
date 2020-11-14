@@ -885,7 +885,7 @@ input[type="search"] {
 	  .subtitle {
 		@include main_text;
 		  max-width: 680px;
-		  margin-bottom: 70px;
+		  margin-bottom:45px;
 		  line-height: 1.8;
 	  }
   }
@@ -967,7 +967,7 @@ input[type="search"] {
 		.wr_build_circle {
 			display: flex;
 			position: relative;
-			margin-bottom: 25px;
+			margin-bottom: 15px;
 
 		}
 		#three::before {
@@ -1031,6 +1031,7 @@ input[type="search"] {
 		// }
 		.slogan {
 			max-width: 270px;
+			margin: 0;
 			p.title {
 				margin: 0px;
 				font-family:  'Open_Sans_SemiBold', sans-serif;
@@ -1673,7 +1674,7 @@ input[type="search"] {
 	}
 }
 .member {
-	padding-top: 120px;
+	padding-top: 100px;
 	padding-bottom: 20px;
 	display: flex;
 	flex-direction: column;
@@ -2358,7 +2359,7 @@ position: relative; }
 }
 
 .questions {
-	padding-bottom: 120px;
+	padding-bottom: 180px;
 	padding-top: 100px;
 	.wr-questions {
 		.h4 {
@@ -2391,7 +2392,6 @@ position: relative; }
 					}
 				}
 			}
-			
 			.question_tab_title {
 				display:block;
 				cursor:pointer;
@@ -2409,20 +2409,11 @@ position: relative; }
 				  position: absolute;
 				  top: 0;
 				  right: -10%;
-			  }
-			  .inner_questions_tab :checked + .question_tab_title {
-				  color: #333;
-			  }
-			  .inner_questions_tab :checked ~ .question_tab_content {
-				display:block;
-				max-width: 970px;
-				
-			  }
-			.accordion {
-				width: 770px;
-				margin-right: 100px;
-				label {
-					@include main_text;
+				  .accordion {
+					width: 770px;
+						margin-right: 100px;
+					.title {
+						@include main_text;
 					font-size: 16px;
 					color: #333;
 					position: relative;
@@ -2431,60 +2422,39 @@ position: relative; }
 					padding: 0px;
 					display: flex;
 					align-items: center;
-				}
-			}
-			
-			.tab input, .tab-content { display: none; }
-			.tab {
-				/* font: Параметры шрифта
-				border:  Параметры рамки */
-				border-left: 15px solid #00aeef;
-				color: #333; 
-				margin-bottom: 20px; /* Расстояние между пунктами */
-			}
-			
-			.tab-title {
-				padding: 10px; /* Поля вокруг текста */
-				display: block; /* Блочный элемент */
-				cursor: pointer; 
-			}
-			.tab-title::after {
-				content: '+'; /* Выводим плюс */
-				position: absolute;
-				top: 0;
-    			right: -40px;
-				text-align: center;
-				font-size: 35px;
-				font-weight: 900;
-				color: #fff;
-				width:60px;
-				height:60px;
-				background: $gradient;
-				float: right; /* Размещаем по правому краю */
-			}
-			.tab-content {
-				padding: 10px 20px; /* Поля вокруг текста */
-				max-width: 770px;
-				@include main_text;
-				-webkit-transition: all 0.2s;
-				-o-transition: all 0.2s;
-				transition: max-width .2s; 
-			}
-			.tab :checked + .tab-title {
-				background-color: #fff; /* Цвет фона */
-				border-radius: 3px 3px 0 0; /* Скругляем уголки */
-				color: #444444; /* Цвет текста */
-			}
-			.tab :checked + .tab-title::after {
-				content: '−'; /* Выводим минус */
-			}
-			.tab :checked ~ .tab-content {
-				display: block; /* Показываем содержимое */
-				max-width: 770px;
+					margin-bottom: 20px;
+					border-left:15px solid #00aeef;
+						p {
+							font-family:'Open_Sans_Regular', sans-serif;
+							margin: 0 0 0 20px;
+						}
+					}
+					.title::after {
+					  content: '+';
+					  position: absolute;
+					  top: 0;
+					  right: 0;
+					  text-align: center;
+					  font-size: 35px;
+					  font-weight: 900;
+					  color: #fff;
+					  width:60px;
+					  height:60px;
+					  background: $gradient;
+  
+					}
+				  }
+			  }
+			  .inner_questions_tab :checked + .question_tab_title {
+				  color: #333;
+			  }
+			  .inner_questions_tab :checked ~ .question_tab_content {
+				display:block;
+				max-width: 970px;
+			  }
 			}
 		}
 	}
-}
 
 @media (max-width: 768px){
 	.questions {
@@ -2523,21 +2493,13 @@ position: relative; }
 			.accordion {
 				margin-left: 150px;
 				width: 370px;
-				label {
+				.title {
 					font-size: 12px;
 				}
 			}
-			.tab input, .tab-content { display: none; }
-			.tab {
-				max-width: 370px;
-			}
-			.tab-title {}
-			.tab-title::after {}
-
 			.tab-content {
 				max-width: 370px;
 			}
-			.tab :checked ~ .tab-content{}
 		}
 	}
 }	
@@ -3205,7 +3167,7 @@ footer {
 			 a {
 				 margin-left: 45px;
 			 }
-			 } 
+			  
 		 }
 	}
 
@@ -3228,4 +3190,5 @@ footer {
 			
 		}
 	}
+}
 }

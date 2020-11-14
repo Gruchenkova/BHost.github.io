@@ -104,5 +104,16 @@ $(".overlay a").click(function () {
 
 
 
-
+(function () {
+  'use strict';
+  $('.accordion').on('click', '.title', function (event) {
+      event.preventDefault();
+      $('.title').not($(this)).siblings('.content').slideUp('normal');
+      $('.title').not($(this)).removeClass("active");
+      $(this).siblings('.content').slideToggle('normal');
+      $(this).toggleClass("active");
+  });
+  $('.accordion .content').hide();
+  $('.accordion .active').next().slideDown('normal');
+})();
 

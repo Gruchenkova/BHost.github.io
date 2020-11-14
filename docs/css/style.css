@@ -1255,7 +1255,7 @@ label:not(:first-child) {
   font-size: 15px;
   color: #616161;
   max-width: 680px;
-  margin-bottom: 70px;
+  margin-bottom: 45px;
   line-height: 1.8;
 }
 
@@ -1295,7 +1295,7 @@ label:not(:first-child) {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .build_slogan #three::before {
@@ -1375,6 +1375,7 @@ label:not(:first-child) {
 
 .build_slogan .slogan {
   max-width: 270px;
+  margin: 0;
 }
 
 .build_slogan .slogan p.title {
@@ -1942,7 +1943,7 @@ label:not(:first-child) {
 }
 
 .member {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2508,7 +2509,7 @@ label:not(:first-child) {
 }
 
 .questions {
-  padding-bottom: 120px;
+  padding-bottom: 180px;
   padding-top: 100px;
 }
 
@@ -2587,21 +2588,12 @@ label:not(:first-child) {
   right: -10%;
 }
 
-.questions .wr-questions .inner_questions .inner_questions_tab :checked + .question_tab_title {
-  color: #333;
-}
-
-.questions .wr-questions .inner_questions .inner_questions_tab :checked ~ .question_tab_content {
-  display: block;
-  max-width: 970px;
-}
-
-.questions .wr-questions .inner_questions .accordion {
+.questions .wr-questions .inner_questions .question_tab_content .accordion {
   width: 770px;
   margin-right: 100px;
 }
 
-.questions .wr-questions .inner_questions .accordion label {
+.questions .wr-questions .inner_questions .question_tab_content .accordion .title {
   font-family: 'Open_Sans_Regular', sans-serif;
   font-size: 15px;
   color: #616161;
@@ -2617,36 +2609,20 @@ label:not(:first-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.questions .wr-questions .inner_questions .tab input,
-.questions .wr-questions .inner_questions .tab-content {
-  display: none;
-}
-
-.questions .wr-questions .inner_questions .tab {
-  /* font: Параметры шрифта
-				border:  Параметры рамки */
-  border-left: 15px solid #00aeef;
-  color: #333;
   margin-bottom: 20px;
-  /* Расстояние между пунктами */
+  border-left: 15px solid #00aeef;
 }
 
-.questions .wr-questions .inner_questions .tab-title {
-  padding: 10px;
-  /* Поля вокруг текста */
-  display: block;
-  /* Блочный элемент */
-  cursor: pointer;
+.questions .wr-questions .inner_questions .question_tab_content .accordion .title p {
+  font-family: 'Open_Sans_Regular', sans-serif;
+  margin: 0 0 0 20px;
 }
 
-.questions .wr-questions .inner_questions .tab-title::after {
+.questions .wr-questions .inner_questions .question_tab_content .accordion .title::after {
   content: '+';
-  /* Выводим плюс */
   position: absolute;
   top: 0;
-  right: -40px;
+  right: 0;
   text-align: center;
   font-size: 35px;
   font-weight: 900;
@@ -2656,42 +2632,15 @@ label:not(:first-child) {
   background: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
   background: -o-linear-gradient(right, #9d35c0, #31aae2);
   background: linear-gradient(to left, #9d35c0, #31aae2);
-  float: right;
-  /* Размещаем по правому краю */
 }
 
-.questions .wr-questions .inner_questions .tab-content {
-  padding: 10px 20px;
-  /* Поля вокруг текста */
-  max-width: 770px;
-  font-family: 'Open_Sans_Regular', sans-serif;
-  font-size: 15px;
-  color: #616161;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -webkit-transition: max-width .2s;
-  -o-transition: max-width .2s;
-  transition: max-width .2s;
+.questions .wr-questions .inner_questions .inner_questions_tab :checked + .question_tab_title {
+  color: #333;
 }
 
-.questions .wr-questions .inner_questions .tab :checked + .tab-title {
-  background-color: #fff;
-  /* Цвет фона */
-  border-radius: 3px 3px 0 0;
-  /* Скругляем уголки */
-  color: #444444;
-  /* Цвет текста */
-}
-
-.questions .wr-questions .inner_questions .tab :checked + .tab-title::after {
-  content: '−';
-  /* Выводим минус */
-}
-
-.questions .wr-questions .inner_questions .tab :checked ~ .tab-content {
+.questions .wr-questions .inner_questions .inner_questions_tab :checked ~ .question_tab_content {
   display: block;
-  /* Показываем содержимое */
-  max-width: 770px;
+  max-width: 970px;
 }
 
 .feedback {
@@ -4337,17 +4286,8 @@ footer .wr-footer .footer_description .footer_feedback a {
     width: 370px;
   }
 
-  .questions .wr-questions .accordion label {
+  .questions .wr-questions .accordion .title {
     font-size: 12px;
-  }
-
-  .questions .wr-questions .tab input,
-  .questions .wr-questions .tab-content {
-    display: none;
-  }
-
-  .questions .wr-questions .tab {
-    max-width: 370px;
   }
 
   .questions .wr-questions .tab-content {
@@ -4457,12 +4397,12 @@ footer .wr-footer .footer_description .footer_feedback a {
     height: 20px;
   }
 
-  footer {
+  footer footer {
     padding-bottom: 40px;
     padding-top: 40px;
   }
 
-  footer .wr-footer {
+  footer footer .wr-footer {
     grid-template-rows: 28px 85px 63px 37px 126px 32px 54px 15px;
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
@@ -4470,7 +4410,7 @@ footer .wr-footer .footer_description .footer_feedback a {
     margin-left: 10px;
   }
 
-  footer .wr-footer ul li {
+  footer footer .wr-footer ul li {
     margin-top: 0px;
     margin-bottom: 5px;
   }
