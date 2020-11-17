@@ -51,18 +51,18 @@ $colorfocus: #00aeef;
 		}
 	  }
 	  
-	//   @mixin alpha-attribute($attribute, $color, $background) {
-	// 	$percent: alpha($color) * 100%;
-	// 	$opaque: opacify($color, 1);
-	// 	$solid-color: mix($opaque, $background, $percent);
-	// 	#{$attribute}: $solid-color;
-	// 	#{$attribute}: $color;
-	//   }
-	//   ul {
-	// 	list-style: none;
-	// 	margin: 0;
-	// 	padding: 0;
-	//   }
+	  @mixin alpha-attribute($attribute, $color, $background) {
+		$percent: alpha($color) * 100%;
+		$opaque: opacify($color, 1);
+		$solid-color: mix($opaque, $background, $percent);
+		#{$attribute}: $solid-color;
+		#{$attribute}: $color;
+	  }
+	  ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	  }
 	  $main: #9726cc;
 	  $text: #FEFEFE;
 	  $contrast: darken($main, 10%);
@@ -295,13 +295,17 @@ $colorfocus: #00aeef;
 		position: absolute;
     	right: 50px;
 	}
+	.menu {
+		justify-content: center;
+	}
+}
 	.menu{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
 	}
-}
+
 
 a.logo {
 	display: flex;
@@ -479,6 +483,217 @@ header .nav {
 		}
 	}
 }
+@media (max-width: 360px) {
+	.wr-preview {
+		padding-bottom: 140px;
+		.page-header {
+			.connection a span{
+						display: none;
+			}
+		}
+		.wr-home {
+			margin-top: 15px;
+			h1 {
+				font-size: 18px;
+				word-wrap: break-word;
+			}
+			.wr_home_content{
+				display: flex;
+				flex-direction: column;
+				max-width: 170px;
+				p {
+					font-size: 10px;
+				}
+				.inner_container {
+					p {
+					font-size: 18px;
+					}
+				}
+			}
+			button {
+				font-size: 10px;
+			}
+			.social {
+				left: 15px;
+				top: 40%;
+				display: flex;
+				flex-direction: column;
+			}			
+		}
+	}
+	.wr-experiensed {
+		margin-top: 100px;
+		margin-bottom: 100px;
+		.inner_experiensed {
+			flex-direction: column;
+			justify-content: center;
+			.text {
+				width: 100%;
+				h2 {
+					font-size: 18px;
+				}
+				p {
+					font-size: 14px;
+				}
+				.box_icon {
+					display: inline-block;
+					justify-content: center;
+					align-items: center;
+					margin-left: 10%;
+					.inner_box {
+						margin-bottom: 10px;
+						margin-right: 0px;
+					}
+				}
+				.icon_description {
+					margin-left: 5px;
+					p {
+						font-size: 14px;
+					}
+					span {
+						font-size: 12px;
+					}
+				}
+			}
+			.experiensed_img {
+				max-width: 300px;	
+			}
+		}
+	}
+	.wr_search {
+		padding-top: 100px;  
+	padding-bottom: 100px;
+		h3 {
+			font-size: 16px;
+		}
+		p {
+			font-size: 14px;
+		}
+		.search {
+			min-width: 300px;
+			.submit {
+				font-size: 12px;
+			}
+		}
+		div.checkbox {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			label {
+				margin-left: 0;
+			}
+		}
+	}
+	.build_website {
+		padding-bottom: 100px;
+		padding-top: 60px;
+		h4 {
+			font-size: 16px;
+		}
+		.subtitle {
+			font-size: 14px;
+		}
+		.build_slogan {
+			.slogan {
+				.title {
+					font-size: 18px;
+				}
+				.slogan_description {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.what_makes_website {
+		padding-top: 80px;
+		padding-bottom: 70px;
+		h5 {
+			font-size: 16px;
+			text-align: center;
+		}
+		.subtitle {
+			font-size: 14px;
+		}
+		.benefits_what_makes {
+		display: flex;
+		flex-direction: column;
+		.content {
+			border: none;
+		}
+		}
+	}
+	.choose_package {
+		padding-top: 80px;
+		padding-bottom: 200px;
+		h6 {
+			font-size: 16px;
+		}
+		.subtitle {
+			font-size: 14px;
+		}
+		.wr_content {
+			img {
+				max-width: 300px;
+				margin-left: 0px;
+			}
+		}
+		.slick_slider {
+			max-width: 300px;
+			.slick_inner {
+				max-width: 300px;
+				p.slick_inner_title {
+					font-size: 16px;
+					margin-bottom: 20px;
+				}
+				span {
+					font-size: 12px;
+					max-width: 300px;
+				}
+				.slick_content {
+					flex-direction: column;
+					.slick_icon {
+						position: absolute;
+						top: 40%;
+    					right: 5%;
+						svg {
+							width: 100px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							}
+						p {
+							font-size: 24px;
+						}	
+					}
+					ul {
+						margin-bottom: 0;
+						margin-top: 0;
+						li {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	.website_builder{
+		.wr-website_builder{
+			.website_builder_description {
+			padding-top: 10px;
+    		padding-bottom: 30px;
+			padding-left: 10px;
+			.buider_h1 {
+				font-size: 16px;
+			}
+			p.description {
+				font-size: 12px;
+			}
+			}
+		}
+	}
+}
 
 .social {
 	position: absolute;
@@ -635,6 +850,7 @@ header .nav {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			align-items: center;
 			.text {
 				h2 {
 					font-size: 20px;
@@ -1173,7 +1389,6 @@ input[type="search"] {
 	  }
 	  .benefits_what_makes {
 		  display: flex;
-		  flex-direction: row;
 		  justify-content: center;
 		  text-align: center;
 		.title {
@@ -1597,19 +1812,25 @@ input[type="search"] {
 					display: none;
 				}
 				.inner_company_tab {
+					.company_tab {
+					}
 					label {
-						font-size: 13px;
-						width: 120px;
-						height: 60px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 10px;
+						width: 80px;
+						height: 40px;
 					}
 				}
 				.company_tab input,
 				.company_tab_content {
 					.content_title {
-						font-size: 16px;
+						font-size: 14px;
 					}
 					.company_tab_content_text {
-						font-size: 12px;
+						font-size: 10px;
+						word-wrap: break-word;
 					}
 				}
 			}
@@ -1790,11 +2011,11 @@ position: relative; }
     .circular-slider .wrapper .controls__left, .circular-slider .wrapper .controls__right {
       bottom: 0%; }
     .circular-slider .wrapper .controls__left {
-		bottom: -2%;
-      left: 43%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%); }
+		bottom: 0%;
+      left: 40%;
+      -webkit-transform: translateY(-40%);
+          -ms-transform: translateY(-40%);
+              transform: translateY(-40%); }
       .circular-slider .wrapper .controls__left:hover,  .circular-slider .wrapper .controls__right:hover,  .circular-slider .wrapper .controls__autoplay:hover {
 	   background: #00aeef;
 	   i {
@@ -1802,11 +2023,11 @@ position: relative; }
 	   }
 	}
     .circular-slider .wrapper .controls__right {
-		bottom: -2%;
-      right: 43%;
-      -webkit-transform: translate(0%, -43%);
-          -ms-transform: translate(0%, -43%);
-              transform: translate(0%, -43%); }
+		bottom: 0%;
+      right: 40%;
+      -webkit-transform: translate(0%, -40%);
+          -ms-transform: translate(0%, -40%);
+              transform: translate(0%, -40%); }
     .circular-slider .wrapper .controls__autoplay {
       bottom: 0%;
       left: 50%;
@@ -1941,11 +2162,12 @@ position: relative; }
 	  
 	  @media (max-width: 768px){
 		  .h8 {
-			  font-size: 20px;
+			  font-size: 14px;
 		  }
 		.circular-slider {
 			width: 500px;
 			height: 200px;
+			
 	  }
 	}
 
@@ -2321,8 +2543,9 @@ position: relative; }
 					max-width: 30px;
 					max-height: 25px;
 					position: absolute;
-					bottom: 12%;
-				    right:20%;
+					display: inline;
+					// bottom: 12%;
+				    // right:20%;
 				}
 			  }
 			
@@ -2367,12 +2590,15 @@ position: relative; }
 	.about_us {
 		padding-top: 80px;
 		padding-bottom: 80px;
-	}
+	
 	.wr_about_us {
 		display: flex;
 		flex-direction: column;
 		.inner_about_us {
 			margin: 0px;
+			.inner_img {
+				max-width: 370px;
+			}
 			.our_name {
 				font-size: 13px;
 			}
@@ -2384,7 +2610,7 @@ position: relative; }
 				font-size: 12px;
 				margin-left: 5%;
 			}
-			
+		}
 		}
 	}
 }
@@ -2520,7 +2746,7 @@ position: relative; }
 					margin-left: 140px;
 					// width: 200px;
 					.title {
-						max-width: 400px;
+						max-width: 270px;
 						font-size: 12px;
 						height: 30px;
 						margin-bottom: 10px;
@@ -2535,7 +2761,7 @@ position: relative; }
 						font-size: 20px;
 					}
 					.content {
-						max-width: 440px;
+						max-width: 270px;
 						p{
 							font-size: 10px;
 						}
@@ -3054,6 +3280,7 @@ footer {
 			font-family:'Open_Sans_Regular', sans-serif;
 		}
 		ul{
+			padding: 0;
 			li {
 				margin-top: 15px;
 				margin-bottom:25px;
