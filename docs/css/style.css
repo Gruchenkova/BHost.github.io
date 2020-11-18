@@ -5377,6 +5377,10 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .footer {
+    max-width: 360px;
+  }
+
+  .footer .wr-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5384,6 +5388,10 @@ footer .wr-footer .footer_description .footer_feedback a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .footer .wr-footer .footer_description {
+    display: none;
   }
 }
 

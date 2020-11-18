@@ -850,8 +850,14 @@ header .nav {
 		}
 	}
 	.footer {
-		display: flex;
-		flex-direction: column;
+		max-width: 360px;
+		.wr-footer {
+			display: flex;
+			flex-direction: column;
+			.footer_description {
+				display: none;
+			}
+		}
 	}
 }
 
