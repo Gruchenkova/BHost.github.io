@@ -743,7 +743,8 @@ header .nav {
 			.inner_about_us {
 				// margin-right: 30px;
 				max-width: 300px;
-
+				max-height: 520px;
+				margin-bottom: 15px;
 				.inner_img {
 					max-width: 300px;
 				}
@@ -764,24 +765,36 @@ header .nav {
 		}
 	}
 	.questions {
-		display: none;
+		// display: none;
 		padding-bottom: 80px;
-	padding-top: 80px;
+		padding-top: 80px;
 		.wr-questions {
+			max-width: 320px;
 			.h4 {
 				font-size: 16px;
 			}
 			.inner_questions {
-				flex-direction: column;
+				// flex-direction: column;
 				.inner_questions_tab {
-					display: flex;
-					flex-direction: column;
-					position: relative;
+					display: inline;
+					// flex-direction: column;
+					// position: relative;
+					
 					.question_tab_content {
 						position: absolute;
 						left: 0;
 						margin-left: 0;
+						.accordion {
+							max-width: 200px;
+						}
 					}
+
+				}
+				.inner_questions_tab input:checked ~ .question_tab_content {
+					display: block;
+					position: absolute;
+					right: 0px;
+					bottom: 0;
 				}
 			}
 		}
@@ -827,15 +840,30 @@ header .nav {
 				width: 60px;
 			}
 		}
-		// .chat-popup {
-		// 	.form-container {
-		// 		max-width: 100px;
-		// 		.btn {
-		// 			width: 60px;
-		// 			margin: 0;
-		// 		}
-		// 	}
-		// } 
+		.chat-popup {
+			max-width: 150px;
+			max-height: 150px;
+			position: absolute;
+			left: -100px;
+			.form-container {
+				width: 100%;
+				p.titel {
+					margin: 0;
+				}
+				label {
+					display: none;
+				}
+				textarea {
+					width: 80%;
+					max-height: 100px;
+				}
+				.btn {
+					width: 60px;
+					margin: 0;
+					padding: 10px 12px;
+				}
+			}
+		} 
 		}
 		
 	}
@@ -854,7 +882,7 @@ header .nav {
 		.wr-footer {
 			display: flex;
 			flex-direction: column;
-			.footer_description {
+			.border, .company, .title4, .our_community, .title3, .help, .title2, .footer_description {
 				display: none;
 			}
 		}
@@ -2573,7 +2601,7 @@ position: relative; }
 		.inner_about_us {
 			margin-right: 30px;
 			max-width: 370px;
-			min-height: 587px;
+			height: 587px;
 			position: relative;
 			background: #fff;
 			.inner_img {
@@ -3320,7 +3348,7 @@ position: relative; }
 			}
 		}
 		.form-container textarea {
-			min-height: 193px;
+			max-height: 193px;
 		}
 		.form-container .btn {
 			width: 80px;
