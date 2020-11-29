@@ -44,6 +44,7 @@ $('.slick_slider').slick({
   slidesToScroll: 1,
 });
 
+
 $('.slider_icon').slick({
    slidesToShow: 4,
   slidesToScroll: 1,
@@ -64,42 +65,6 @@ $('.slider_comment').slick({
 
 
 
-// let links = document.querySelectorAll('.tabs-links li');
-// let content = document.querySelectorAll('.tabs-content li');
-// for(let i=0; i <links.length; i++) {
-//     (function(i) {
-//        let link = links[i];
-//        link.onclick = function() {
-//            for(let j=0; j <content.length; j++) {
-//               let opacity = window.getComputedStyle(content[j]).opacity;
-//               if(opacity == "1") {
-//                  content[j].style.opacity = "0";
-//               }
-//            }
-//         content[i].style.opacity = "1";
-//         }
-//     })(i);
-// }
-
-
-$("#navToggle").click(function () {
-  $(this).toggleClass("active");
-  $(".overlay").toggleClass("open");
-  // this line ▼ prevents content scroll-behind
-  $("body").toggleClass("locked");
-});
-
-$(".overlay a").click(function () {
-  $("#navToggle").toggleClass("active");
-  $(".overlay").toggleClass("open");
-  $("body").toggleClass("locked");
-});
-
-
-// let photo = document.getElementById('pic_inner_member1');
-// photo.onclick = function() {
-//     let block = document.getElementById('block1');
-//     block.style.display = 'block';
 
 
 
@@ -148,3 +113,56 @@ $(function() {
   
   var accordion = new Accordion($('.accordion-menu'), false);
 })
+
+
+$(window).scroll(startCounter);
+
+function startCounter() {
+    if ($(window).scrollTop() > 5500) {
+        $(window).off('scroll', startCounter);
+        $('.number').each(function() {
+            let $this = $(this);
+            countTo = $this.attr('data-count');
+            $({ countNum: $this.text() }).animate({
+                countNum: countTo
+            }, {
+                duration: 4000,
+                easing: 'linear',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
+                }
+            });
+        });
+    }
+};
+
+
+
+$(document).ready(function(){
+      $("#menu").on("click","a", function (event) {
+          //отменяем стандартную обработку нажатия по ссылке
+          event.preventDefault();
+          //забираем идентификатор бока с атрибута href
+          var id  = $(this).attr('href'),
+          //узнаем высоту от начала страницы до блока на который ссылается якорь
+              top = $(id).offset().top;
+          //анимируем переход на расстояние - top за 1500 мс
+          $('body,html').animate({scrollTop: top}, 1500);
+      });
+  });
+  
+//   $(".hamburger_content").click(function () {
+//     // $(this).toggleClass("active");
+//     // $(".overlay").toggleClass("open");
+//     // this line ▼ prevents content scroll-behind
+//     $("body").toggleClass("locked");
+// });
+
+// $(".drawer-list a").click(function () {
+//     $(".hamburger_content").toggleClass("active");
+//     // $(".overlay").toggleClass("open");
+//     $("body").toggleClass("locked");
+// });
+    
+
+   

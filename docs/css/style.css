@@ -422,6 +422,10 @@ template {
   unicode-range: U+0020-2074;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fff;
   color: #555;
@@ -2100,7 +2104,6 @@ label:not(:first-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-right: 1px dashed #00aeef;
   padding-top: 15px;
   padding-bottom: 50px;
   padding-right: 20px;
@@ -2167,6 +2170,10 @@ label:not(:first-child) {
 
 .pricing .slick_slider {
   max-width: 570px;
+}
+
+.pricing .slick_slider li.slick-active {
+  background: #31aae2;
 }
 
 .pricing .slick_slider .slick-prev,
@@ -2300,6 +2307,10 @@ label:not(:first-child) {
   cursor: pointer;
 }
 
+.pricing .my-dots li .slick-active {
+  color: #31aae2;
+}
+
 .pricing .my-dots li button {
   font-size: 0;
   line-height: 0;
@@ -2308,7 +2319,6 @@ label:not(:first-child) {
   height: 15px;
   padding: 5px;
   cursor: pointer;
-  color: #31aae2;
   border: 0;
   outline: none;
   background: #fff;
@@ -2336,6 +2346,10 @@ label:not(:first-child) {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pricing .my-dots li.slick-active button {
+  background: #31aae2;
+}
+
 .wr-website_builder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2358,7 +2372,7 @@ label:not(:first-child) {
           align-items: center;
   padding-top: 40px;
   padding-bottom: 60px;
-  padding-left: 240px;
+  padding-left: 15%;
 }
 
 .website_builder_description .buider_h1 {
@@ -2474,6 +2488,7 @@ label:not(:first-child) {
 }
 
 .result {
+  width: 100%;
   padding-top: 175px;
   padding-bottom: 150px;
   background-image: url(../img/backgroundresult.jpg);
@@ -2483,13 +2498,8 @@ label:not(:first-child) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.result .inner_result:not(:first-child) {
-  margin-left: 150px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .result .inner_result {
@@ -2568,8 +2578,8 @@ label:not(:first-child) {
 }
 
 .review {
-  padding-top: 100px;
-  padding-bottom: 20px;
+  padding-top: 130px;
+  padding-bottom: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2582,11 +2592,16 @@ label:not(:first-child) {
           justify-content: center;
 }
 
+.review .container-custom {
+  min-height: 460px;
+}
+
 .review .h8 {
   font-family: 'Open_Sans_SemiBold', sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   color: #333333;
+  margin-top: -40px;
 }
 
 .slider {
@@ -2623,6 +2638,7 @@ label:not(:first-child) {
 }
 
 .circular-slider .wrapper {
+  height: 400px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2633,7 +2649,7 @@ label:not(:first-child) {
   position: relative;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 20px 20px 0px 20px;
+  padding: 10px 0px 0px 0px;
   overflow: hidden;
 }
 
@@ -2688,7 +2704,7 @@ label:not(:first-child) {
 }
 
 .circular-slider .wrapper .controls__left {
-  bottom: 0%;
+  bottom: -2%;
   left: 40%;
   -webkit-transform: translateY(-40%);
   -ms-transform: translateY(-40%);
@@ -2708,7 +2724,7 @@ label:not(:first-child) {
 }
 
 .circular-slider .wrapper .controls__right {
-  bottom: 0%;
+  bottom: -2%;
   right: 40%;
   -webkit-transform: translate(0%, -40%);
   -ms-transform: translate(0%, -40%);
@@ -2793,7 +2809,7 @@ label:not(:first-child) {
 
 .circular-slider .wrapper .descriptions {
   position: absolute;
-  bottom: 0%;
+  bottom: 5%;
   z-index: 0;
 }
 
@@ -2836,7 +2852,7 @@ label:not(:first-child) {
 .circular-slider .wrapper .descriptions__item h1 {
   font-family: 'Open_Sans_Bold', sans-serif;
   color: #333333;
-  font-size: 400%;
+  font-size: 200%;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -2844,7 +2860,8 @@ label:not(:first-child) {
 .circular-slider .wrapper .descriptions__item span {
   font-family: 'Open_Sans_Bold', sans-serif;
   color: #333333;
-  font-size: 200%;
+  font-size: 150%;
+  margin-top: 0;
 }
 
 .fa-quote-left {
@@ -2864,7 +2881,9 @@ label:not(:first-child) {
 }
 
 .container_slider {
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  max-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2878,7 +2897,7 @@ label:not(:first-child) {
 
 .about_us {
   background-color: #f9f9f9;
-  padding-top: 20px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 
@@ -3266,6 +3285,11 @@ label:not(:first-child) {
   background: linear-gradient(to left, #9d35c0, #31aae2);
 }
 
+.faq .wr_faq .inner_faq .question_tab_content .accordion div.title.active::after {
+  content: '\2212';
+  color: #fff;
+}
+
 .faq .wr_faq .inner_faq .inner_faq_tab :checked + .question_tab_title {
   color: #333;
 }
@@ -3276,8 +3300,8 @@ label:not(:first-child) {
 }
 
 .feedback {
-  padding-top: 105px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 130px;
   background: -webkit-gradient(linear, right top, left top, from(#9d35c0), to(#31aae2));
   background: -o-linear-gradient(right, #9d35c0, #31aae2);
   background: linear-gradient(to left, #9d35c0, #31aae2);
@@ -3288,21 +3312,22 @@ label:not(:first-child) {
   font-size: 30px;
   color: #fff;
   text-transform: uppercase;
-  margin-left: 13%;
+  width: 100%;
 }
 
 .feedback p.feedback_subtitle {
+  width: 100%;
   font-family: 'Open_Sans_SemiBold', sans-serif;
   margin-bottom: 23px;
   font-size: 13px;
   letter-spacing: 4px;
-  margin-left: 19%;
   text-transform: uppercase;
   color: #fff;
 }
 
 .feedback .wr-subscribe {
-  margin-right: 450px;
+  position: absolute;
+  left: 2%;
   /* стили для поля ввода */
   /* меняем оформление поля ввода при фокусе */
   /* оформляем кнопку отправки */
@@ -3968,6 +3993,19 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 }
 
+@media (min-width: 1150px) {
+  .content:not(:last-child) {
+    border-right: 1px dashed #00aeef;
+  }
+}
+
+@media (max-width: 1150px) {
+  .services .wr_content .content {
+    padding-bottom: 25px;
+    border: none;
+  }
+}
+
 @media (max-width: 1140px) {
   .wr_content {
     display: -webkit-box;
@@ -4005,12 +4043,6 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .wr_about_us .inner_about_us .inner_img {
     max-width: 370px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .services .wr_content .content {
-    border: none;
   }
 }
 
@@ -4235,6 +4267,7 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .how_it_works .how_it_works_content {
     margin-bottom: 30px;
+    width: 100%;
   }
 
   .how_it_works .how_it_works_content .img_circle {
@@ -4454,7 +4487,7 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .about_us {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 
   .about_us .wr_about_us {
@@ -4490,8 +4523,8 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .faq {
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-top: 40px;
   }
 
   .faq .wr_faq .h4 {
@@ -4595,7 +4628,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .feedback .feedback_chat {
-    width: 135px;
+    width: 20%;
     height: 193px;
     top: 100px;
   }
@@ -4971,7 +5004,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .slider_icon {
-    max-width: 468px;
+    max-width: 80%;
     min-height: 80px;
   }
 
@@ -5172,7 +5205,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .build_website {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     padding-top: 60px;
   }
 
@@ -5182,6 +5215,10 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .build_website .subtitle {
     font-size: 14px;
+  }
+
+  .build_website .how_it_works .how_it_works_content {
+    width: 100%;
   }
 
   .build_website .how_it_works .slogan .title {
@@ -5222,7 +5259,7 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .pricing {
     padding-top: 80px;
-    padding-bottom: 200px;
+    padding-bottom: 80px;
   }
 
   .pricing h6 {
@@ -5266,7 +5303,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   .pricing .slick_slider .slick_inner .slick_content .slick_icon {
     position: absolute;
     top: 40%;
-    right: 5%;
+    right: 0%;
   }
 
   .pricing .slick_slider .slick_inner .slick_content .slick_icon svg {
@@ -5293,7 +5330,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .website_builder .wr-website_builder .builder_background {
-    width: 90%;
+    width: 70%;
   }
 
   .website_builder .wr-website_builder .website_builder_description {
@@ -5397,7 +5434,7 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .faq {
     padding-bottom: 80px;
-    padding-top: 80px;
+    padding-top: 40px;
   }
 
   .faq .wr_faq {
@@ -5430,6 +5467,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .accordion-menu li.open .dropdownlink {
+    width: 280px;
     color: #CDDC39;
   }
 
@@ -5444,6 +5482,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .dropdownlink {
+    width: 280px;
     cursor: pointer;
     display: block;
     padding: 10px 35px 10px 35px;
@@ -5499,6 +5538,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .feedback .inner_feedback {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5515,16 +5555,24 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .feedback .inner_feedback .h4 {
+    text-align: center;
     font-size: 16px;
     margin: 0;
   }
 
   .feedback .inner_feedback p.feedback_subtitle {
+    text-align: center;
+    width: 100%;
     font-size: 12px;
     margin: 0;
   }
 
   .feedback .inner_feedback .wr-subscribe {
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    bottom: -70%;
     margin: 0;
   }
 
@@ -5594,7 +5642,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .wr_slider_icon .slider_icon {
-    max-width: 300px;
+    max-width: 100%;
   }
 
   .wr_slider_icon .slider_icon img {
