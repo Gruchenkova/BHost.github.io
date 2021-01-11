@@ -13,15 +13,15 @@ $colorfocus: #00aeef;
 @media (max-width: 768px){
     .navBurger {
         position: fixed;
-        right: 20px;
-        top: 20px;
+        right: 33px;
+        top: 19px;
         cursor: pointer;
-        background: #111;
+        background: linear-gradient(to right, rgb(99, 211, 255), rgb(108, 201, 251), rgb(116, 192, 246), rgb(125, 182, 242), rgb(134, 173, 238), rgb(143, 163, 233), rgb(151, 154, 229), rgb(160, 144, 224), rgb(169, 135, 220), rgb(178, 125, 216), rgb(186, 116, 211), rgb(195, 106, 207));
         box-sizing: border-box;
         background-clip: content-box;
-        width: 30px;
-        height: 25px;
-        border-top: 11px solid transparent;
+        width: 25px;
+        height: 20px;
+        border-top: 7px solid transparent;
         border-bottom: 11px solid transparent;
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
@@ -32,10 +32,10 @@ $colorfocus: #00aeef;
         &:after {
             content: "";
             position: absolute;
-            background: #111;
+            background: linear-gradient(to right, rgb(99, 211, 255), rgb(111, 208, 252), rgb(122, 205, 249), rgb(134, 202, 246), rgb(146, 199, 243), rgb(157, 196, 240), rgb(169, 194, 236), rgb(180, 191, 233), rgb(192, 188, 230), rgb(204, 185, 227), rgb(215, 182, 224), rgb(227, 179, 221));
             height: 2px;
             width: 100%;
-            right: 0;
+            right: 2px;
             will-change: rotate;
             -webkit-transform: rotate(0deg);
             transform: rotate(0deg);

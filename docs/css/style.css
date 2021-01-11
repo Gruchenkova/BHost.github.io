@@ -4708,16 +4708,18 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .navBurger {
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 33px;
+    top: 19px;
     cursor: pointer;
-    background: #111;
+    background: -webkit-gradient(linear, left top, right top, from(#63d3ff), color-stop(#6cc9fb), color-stop(#74c0f6), color-stop(#7db6f2), color-stop(#86adee), color-stop(#8fa3e9), color-stop(#979ae5), color-stop(#a090e0), color-stop(#a987dc), color-stop(#b27dd8), color-stop(#ba74d3), to(#c36acf));
+    background: -o-linear-gradient(left, #63d3ff, #6cc9fb, #74c0f6, #7db6f2, #86adee, #8fa3e9, #979ae5, #a090e0, #a987dc, #b27dd8, #ba74d3, #c36acf);
+    background: linear-gradient(to right, #63d3ff, #6cc9fb, #74c0f6, #7db6f2, #86adee, #8fa3e9, #979ae5, #a090e0, #a987dc, #b27dd8, #ba74d3, #c36acf);
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     background-clip: content-box;
-    width: 30px;
-    height: 25px;
-    border-top: 11px solid transparent;
+    width: 25px;
+    height: 20px;
+    border-top: 7px solid transparent;
     border-bottom: 11px solid transparent;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -4732,10 +4734,12 @@ footer .wr-footer .footer_description .footer_feedback a {
   .navBurger:after {
     content: "";
     position: absolute;
-    background: #111;
+    background: -webkit-gradient(linear, left top, right top, from(#63d3ff), color-stop(#6fd0fc), color-stop(#7acdf9), color-stop(#86caf6), color-stop(#92c7f3), color-stop(#9dc4f0), color-stop(#a9c2ec), color-stop(#b4bfe9), color-stop(#c0bce6), color-stop(#ccb9e3), color-stop(#d7b6e0), to(#e3b3dd));
+    background: -o-linear-gradient(left, #63d3ff, #6fd0fc, #7acdf9, #86caf6, #92c7f3, #9dc4f0, #a9c2ec, #b4bfe9, #c0bce6, #ccb9e3, #d7b6e0, #e3b3dd);
+    background: linear-gradient(to right, #63d3ff, #6fd0fc, #7acdf9, #86caf6, #92c7f3, #9dc4f0, #a9c2ec, #b4bfe9, #c0bce6, #ccb9e3, #d7b6e0, #e3b3dd);
     height: 2px;
     width: 100%;
-    right: 0;
+    right: 2px;
     will-change: rotate;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
@@ -5191,17 +5195,16 @@ footer .wr-footer .footer_description .footer_feedback a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .wr_search div.checkbox label {
+    min-width: 170px;
     margin-left: 0;
+    text-align: center;
   }
 
   .build_website {
@@ -5462,22 +5465,17 @@ footer .wr-footer .footer_description .footer_feedback a {
     list-style: none;
   }
 
-  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu a {
-    text-decoration: none;
-  }
-
-  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .accordion-menu li.open .dropdownlink {
-    width: 280px;
-    color: #CDDC39;
-  }
-
-  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .accordion-menu li.open .dropdownlink .fa-chevron-down {
+  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .open .fa-chevron-down {
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
   }
 
-  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .accordion-menu li:last-child .dropdownlink {
+  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu a {
+    text-decoration: none;
+  }
+
+  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu li:last-child .dropdownlink {
     border-bottom: 0;
   }
 
@@ -5487,7 +5485,6 @@ footer .wr-footer .footer_description .footer_feedback a {
     display: block;
     padding: 10px 35px 10px 35px;
     font-size: 15px;
-    border-bottom: 1px solid #ccc;
     color: #333333;
     font-family: 'Open_Sans_Regular', sans-serif;
     position: relative;
@@ -5509,11 +5506,6 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .submenuItems {
     display: none;
-    background: #f8f7f7;
-  }
-
-  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .submenuItems li {
-    border-bottom: 1px solid #B6B6B6;
   }
 
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .submenuItems a {

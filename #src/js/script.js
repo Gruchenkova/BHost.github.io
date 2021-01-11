@@ -152,17 +152,28 @@ $(document).ready(function(){
   });
   
 //   $(".hamburger_content").click(function () {
-//     // $(this).toggleClass("active");
-//     // $(".overlay").toggleClass("open");
+//     $(this).toggleClass("active");
+//     $(".overlay").toggleClass("open");
 //     // this line ▼ prevents content scroll-behind
 //     $("body").toggleClass("locked");
 // });
 
 // $(".drawer-list a").click(function () {
 //     $(".hamburger_content").toggleClass("active");
-//     // $(".overlay").toggleClass("open");
+//     $(".overlay").toggleClass("open");
 //     $("body").toggleClass("locked");
 // });
-    
+$("#navToggle").click(function () {
+  $(this).toggleClass("active");
+  $(".overlay").toggleClass("open");
+  // this line ▼ prevents content scroll-behind
+  $("body").toggleClass("locked");
+});
+
+$(".overlay a").click(function () {
+  $("#navToggle").toggleClass("active");
+  $(".overlay").toggleClass("open");
+  $("body").toggleClass("locked");
+});
 
    
