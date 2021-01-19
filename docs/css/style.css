@@ -4721,7 +4721,7 @@ footer .wr-footer .footer_description .footer_feedback a {
     -webkit-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    z-index: 100;
+    z-index: 1009999;
   }
 
   .navBurger:before,
@@ -4797,7 +4797,7 @@ footer .wr-footer .footer_description .footer_feedback a {
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
-    z-index: 99;
+    z-index: 999999;
   }
 
   .overlay.open {

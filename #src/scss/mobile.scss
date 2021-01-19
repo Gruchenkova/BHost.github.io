@@ -27,7 +27,7 @@ $colorfocus: #00aeef;
         transform: rotate(0deg);
         -webkit-transition: all 0.25s ease-in-out;
         transition: all 0.25s ease-in-out;
-        z-index: 100;
+        z-index: 1009999;
         &:before,
         &:after {
             content: "";
@@ -84,7 +84,7 @@ $colorfocus: #00aeef;
         visibility: hidden;
         transition: all 0.4s ease-in-out;
         overflow: hidden;
-        z-index: 99;
+        z-index: 999999;
         &.open {
             opacity: 1;
             visibility: visible;
