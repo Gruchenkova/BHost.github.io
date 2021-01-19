@@ -424,6 +424,7 @@ template {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -432,6 +433,7 @@ body {
   font-size: 15px;
   line-height: 1.8;
   font-family: 'OpenSans-Regular', sans-serif;
+  overflow-x: hidden;
 }
 
 .container-custom {
@@ -1540,6 +1542,9 @@ header .nav li:hover span:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1603,6 +1608,7 @@ header .nav li:hover span:nth-child(1) {
 }
 
 .wr-experiensed .inner_experiensed .text .box_icon .icon_description {
+  width: 150px;
   text-align: center;
   margin-left: 25px;
   text-align: center;
@@ -2189,7 +2195,7 @@ label:not(:first-child) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 570px;
+  width: 100%;
 }
 
 .pricing .slick_slider .slick_inner p.slick_inner_title {
@@ -2284,7 +2290,7 @@ label:not(:first-child) {
   content: '✔';
   position: absolute;
   top: 0;
-  left: -15px;
+  left: -30px;
 }
 
 .pricing .my-dots {
@@ -4326,6 +4332,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .pricing .wr_content {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4333,11 +4340,7 @@ footer .wr-footer .footer_description .footer_feedback a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-top: 20px;
-    margin-left: 10px;
   }
 
   .pricing .wr_content img {
@@ -4345,12 +4348,8 @@ footer .wr-footer .footer_description .footer_feedback a {
     margin-top: 80px;
   }
 
-  .pricing .slick_slider {
-    max-width: 300px;
-  }
-
   .pricing .slick_slider .slick_inner {
-    max-width: 300px;
+    width: 100%;
   }
 
   .pricing .slick_slider .slick_inner p.slick_inner_title {
@@ -4360,7 +4359,6 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .pricing .slick_slider .slick_inner span {
     font-size: 12px;
-    max-width: 300px;
   }
 
   .pricing .slick_slider .slick_inner .slick_content {
@@ -4527,13 +4525,13 @@ footer .wr-footer .footer_description .footer_feedback a {
     padding-top: 40px;
   }
 
+  .faq .wr_faq {
+    width: 100%;
+  }
+
   .faq .wr_faq .h4 {
     font-size: 20px;
     margin-bottom: 30px;
-  }
-
-  .faq .wr_faq .wr_tabs {
-    max-width: 468px;
   }
 
   .faq .wr_faq .wr_tabs .inner_faq_tab {
@@ -4584,10 +4582,6 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .faq .wr_faq .wr_tabs .inner_faq_tab .question_tab_content .accordion .content p {
     font-size: 10px;
-  }
-
-  .faq .wr_faq .wr_tabs .inner_faq_tab :checked ~ .question_tab_content {
-    max-width: 468px;
   }
 
   .feedback {
@@ -4708,7 +4702,7 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .navBurger {
     position: fixed;
-    right: 33px;
+    right: 30px;
     top: 19px;
     cursor: pointer;
     background: -webkit-gradient(linear, left top, right top, from(#63d3ff), color-stop(#6cc9fb), color-stop(#74c0f6), color-stop(#7db6f2), color-stop(#86adee), color-stop(#8fa3e9), color-stop(#979ae5), color-stop(#a090e0), color-stop(#a987dc), color-stop(#b27dd8), color-stop(#ba74d3), to(#c36acf));
@@ -4873,7 +4867,7 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .overlayMenu ul li a {
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.103);
     color: #fff;
     text-decoration: none;
     padding: 10px 40px 10px 40px;
@@ -5059,6 +5053,10 @@ footer .wr-footer .footer_description .footer_feedback a {
     padding-bottom: 140px;
   }
 
+  .wr-preview .page-header .connection svg {
+    width: 18px;
+  }
+
   .wr-preview .page-header .connection a span {
     display: none;
   }
@@ -5142,16 +5140,25 @@ footer .wr-footer .footer_description .footer_feedback a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 10%;
+    width: 100%;
   }
 
   .wr-experiensed .inner_experiensed .text .box_icon .inner_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 10px;
     margin-right: 0px;
   }
 
   .wr-experiensed .inner_experiensed .text .icon_description {
     margin-left: 5px;
+    width: 150px;
   }
 
   .wr-experiensed .inner_experiensed .text .icon_description p {
@@ -5184,6 +5191,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .wr_search .search {
+    width: 100%;
     min-width: 300px;
   }
 
@@ -5202,6 +5210,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .wr_search div.checkbox label {
+    margin-bottom: 14px;
     min-width: 170px;
     margin-left: 0;
     text-align: center;
@@ -5274,16 +5283,16 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .pricing .wr_content img {
-    max-width: 300px;
+    max-width: 285px;
     margin-left: 0px;
   }
 
   .pricing .slick_slider {
-    max-width: 300px;
+    width: 100%;
   }
 
   .pricing .slick_slider .slick_inner {
-    max-width: 300px;
+    width: 100%;
   }
 
   .pricing .slick_slider .slick_inner p.slick_inner_title {
@@ -5293,7 +5302,7 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .pricing .slick_slider .slick_inner span {
     font-size: 12px;
-    max-width: 300px;
+    width: 100%;
   }
 
   .pricing .slick_slider .slick_inner .slick_content {
@@ -5324,12 +5333,17 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .pricing .slick_slider .slick_inner .slick_content ul {
+    width: 100%;
     margin-bottom: 0;
     margin-top: 0;
   }
 
   .pricing .slick_slider .slick_inner .slick_content ul li {
     margin-bottom: 0;
+  }
+
+  .website_builder .wr-website_builder {
+    width: 100%;
   }
 
   .website_builder .wr-website_builder .builder_background {
@@ -5403,6 +5417,10 @@ footer .wr-footer .footer_description .footer_feedback a {
     display: none;
   }
 
+  .about_us {
+    width: 100%;
+  }
+
   .about_us .wr_about_us {
     width: 100%;
     display: contents;
@@ -5441,7 +5459,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .faq .wr_faq {
-    max-width: 320px;
+    width: 100%;
   }
 
   .faq .wr_faq .h4 {
@@ -5454,7 +5472,6 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu {
     width: 100%;
-    max-width: 350px;
     background: #fff;
     border-radius: 4px;
     padding: 0;
@@ -5480,10 +5497,10 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .dropdownlink {
-    width: 280px;
+    width: 100%;
     cursor: pointer;
     display: block;
-    padding: 10px 35px 10px 35px;
+    padding: 10px 0px 10px 0px;
     font-size: 15px;
     color: #333333;
     font-family: 'Open_Sans_Regular', sans-serif;
@@ -5493,10 +5510,13 @@ footer .wr-footer .footer_description .footer_feedback a {
     transition: all 0.4s ease-out;
   }
 
+  .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .dropdownlink span {
+    margin-left: 20px;
+  }
+
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .dropdownlink i {
     position: absolute;
     top: 17px;
-    left: 16px;
   }
 
   .faq .wr_faq .inner_faq .wr_tabs .accordion-menu .dropdownlink .fa-chevron-down {
@@ -5646,6 +5666,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .footer .wr-footer {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5653,6 +5674,12 @@ footer .wr-footer .footer_description .footer_feedback a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .footer .wr-footer .border,

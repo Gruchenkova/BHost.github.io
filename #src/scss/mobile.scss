@@ -13,7 +13,7 @@ $colorfocus: #00aeef;
 @media (max-width: 768px){
     .navBurger {
         position: fixed;
-        right: 33px;
+        right: 30px;
         top: 19px;
         cursor: pointer;
         background: linear-gradient(to right, rgb(99, 211, 255), rgb(108, 201, 251), rgb(116, 192, 246), rgb(125, 182, 242), rgb(134, 173, 238), rgb(143, 163, 233), rgb(151, 154, 229), rgb(160, 144, 224), rgb(169, 135, 220), rgb(178, 125, 216), rgb(186, 116, 211), rgb(195, 106, 207));
@@ -131,7 +131,7 @@ $colorfocus: #00aeef;
                 width: 100%;
                 a {
                     display: inline-block;
-                    border: 1px solid rgba(255, 255, 255, 0.09);
+                    border: 1px solid rgba(255, 255, 255, 0.103);
                     color: #fff;
                     text-decoration: none;
                     padding: 10px 40px 10px 40px;
