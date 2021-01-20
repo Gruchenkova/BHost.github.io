@@ -2286,13 +2286,6 @@ label:not(:first-child) {
   margin-bottom: 10px;
 }
 
-.pricing .slick_slider .slick_inner .slick_content ul li:after {
-  content: '✔';
-  position: absolute;
-  top: 0;
-  left: -30px;
-}
-
 .pricing .my-dots {
   position: absolute;
   bottom: -100px;
@@ -2914,6 +2907,7 @@ label:not(:first-child) {
 }
 
 .about_us .wr_about_us .inner_about_us {
+  width: 100%;
   margin-right: 30px;
   max-width: 370px;
   height: 587px;
@@ -2934,6 +2928,7 @@ label:not(:first-child) {
 }
 
 .about_us .wr_about_us .inner_about_us .our_name {
+  width: 100%;
   font-family: 'Open_Sans_Regular', sans-serif;
   font-size: 15px;
   color: #b0b0b0;
@@ -2941,6 +2936,7 @@ label:not(:first-child) {
 }
 
 .about_us .wr_about_us .inner_about_us .h3 {
+  width: 100%;
   font-family: 'Open_Sans_SemiBold', sans-serif;
   font-size: 16px;
   max-width: 300px;
@@ -2955,6 +2951,7 @@ label:not(:first-child) {
   font-size: 15px;
   color: #616161;
   margin-left: 11%;
+  width: 100%;
 }
 
 .about_us .wr_about_us .inner_about_us button {
@@ -4044,6 +4041,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .wr_about_us .inner_about_us {
+    width: 100%;
     margin: 0px;
   }
 
@@ -4499,6 +4497,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .about_us .wr_about_us .inner_about_us {
+    width: 100%;
     margin: 0px;
   }
 
@@ -4507,15 +4506,19 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .about_us .wr_about_us .inner_about_us .our_name {
+    width: 100%;
     font-size: 13px;
+    padding-left: 11%;
   }
 
   .about_us .wr_about_us .inner_about_us .h3 {
+    width: 100%;
     font-size: 14px;
-    margin-left: 5%;
+    margin-left: 11%;
   }
 
   .about_us .wr_about_us .inner_about_us .h3_discription {
+    width: 100%;
     font-size: 12px;
     margin-left: 5%;
   }
@@ -4960,7 +4963,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .social a i {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .social a i:hover {
@@ -5336,6 +5339,7 @@ footer .wr-footer .footer_description .footer_feedback a {
     width: 100%;
     margin-bottom: 0;
     margin-top: 0;
+    padding-left: 10px;
   }
 
   .pricing .slick_slider .slick_inner .slick_content ul li {
@@ -5427,6 +5431,7 @@ footer .wr-footer .footer_description .footer_feedback a {
   }
 
   .about_us .wr_about_us .inner_about_us {
+    width: 100%;
     max-width: 300px;
     max-height: 520px;
     margin-bottom: 15px;
@@ -5438,13 +5443,18 @@ footer .wr-footer .footer_description .footer_feedback a {
 
   .about_us .wr_about_us .inner_about_us .our_name {
     font-size: 13px;
+    width: 100%;
+    padding-left: 5%;
   }
 
   .about_us .wr_about_us .inner_about_us .h3 {
+    margin-left: 5%;
     font-size: 14px;
+    width: 100%;
   }
 
   .about_us .wr_about_us .inner_about_us .h3_discription {
+    width: 100%;
     font-size: 12px;
   }
 

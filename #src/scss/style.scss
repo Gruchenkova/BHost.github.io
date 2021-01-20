@@ -686,6 +686,7 @@ $colorfocus: #00aeef;
 						ul {
 							margin-bottom: 0;
 							margin-top: 0;
+							
 							li {
 								margin-bottom: 0;
 							}
@@ -777,18 +778,23 @@ $colorfocus: #00aeef;
 		display: flex;
 		flex-direction: column;
 		.inner_about_us {
+			width: 100%;
 			margin: 0px;
 			.inner_img {
 				max-width: 370px;
 			}
 			.our_name {
+				width: 100%;
 				font-size: 13px;
+				padding-left: 11%;
 			}
 			.h3 {
+				width: 100%;
 				font-size: 14px;
-				margin-left: 5%;
+				margin-left: 11%;
 			}
 			.h3_discription {
+				width: 100%;
 				font-size: 12px;
 				margin-left: 5%;
 			}
@@ -948,6 +954,7 @@ $colorfocus: #00aeef;
 		display: flex;
 		flex-direction: column;
 		.inner_about_us {
+			width: 100%;
 			margin: 0px;
 			.inner_img {
 				max-width: 370px;
@@ -1321,6 +1328,7 @@ header .nav {
 						width: 100%;
 						margin-bottom: 0;
 						margin-top: 0;
+						padding-left: 10px;
 						li {
 							margin-bottom: 0;
 						}
@@ -1395,6 +1403,7 @@ header .nav {
 			width: 100%;
 			display: contents;
 			.inner_about_us {
+				width: 100%;
 				max-width: 300px;
 				max-height: 520px;
 				margin-bottom: 15px;
@@ -1403,11 +1412,16 @@ header .nav {
 				}
 				.our_name {
 					font-size: 13px;
+					width: 100%;
+					padding-left: 5%;
 				}
 				.h3 {
+					margin-left: 5%;
 					font-size: 14px;
+					width: 100%;
 				}
 				.h3_discription {
+					width: 100%;
 					font-size: 12px;
 				}
 				.comment {
@@ -2209,12 +2223,12 @@ input[type="search"] {
 						position: relative;
 						margin-bottom: 10px;
 					}
-					li:after {
-						content: '✔';
-						position: absolute;
-						top: 0;
-						left: -30px;
-					}				
+					// li:after {
+					// 	content: '\2713';
+					// 	position: absolute;
+					// 	top: 0;
+					// 	left: -30px;
+					// }				
 				}
 			}	
 		}
@@ -2693,6 +2707,7 @@ position: relative; }
 	.wr_about_us {
 		display: flex;
 		.inner_about_us {
+			width: 100%;
 			margin-right: 30px;
 			max-width: 370px;
 			height: 587px;
@@ -2707,12 +2722,14 @@ position: relative; }
 			}
 			
 			.our_name {
+				width: 100%;
 				font-family: 'Open_Sans_Regular', sans-serif;
 				font-size: 15px;
 				color: #b0b0b0;
 				padding-left: 11%;
 			}
 			.h3 {
+				width: 100%;
 				font-family:  'Open_Sans_SemiBold', sans-serif;
 				font-size: 16px;
 				max-width: 300px;
@@ -2724,6 +2741,7 @@ position: relative; }
 			.h3_discription {
 				@include main_text;
 				margin-left: 11%;
+				width: 100%;
 			}
 			button {
 				margin-left: 25px;
