@@ -1592,7 +1592,18 @@ header .nav li:hover span:nth-child(1) {
 }
 
 .wr-experiensed .inner_experiensed .text .box_icon .inner_box .first_icon {
+  position: relative;
   background-color: #1a1a2b;
+}
+
+.wr-experiensed .inner_experiensed .text .box_icon .inner_box .first_icon svg {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .wr-experiensed .inner_experiensed .text .box_icon .inner_box .second_icon {
